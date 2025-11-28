@@ -1,8 +1,8 @@
 import Image from "next/image";
 import heroImage from "@/public/images/hero.png";
+import heroImageOl from "@/public/images/hero_ol2.png";
 import GradientOne from "./GradientOne";
 import { GoogleStars } from "./GoogleStars";
-import { useState } from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 function HeroMaleviz() {
   //   const [show, setShow] = useState(true);
@@ -10,7 +10,7 @@ function HeroMaleviz() {
     <div>
       <div className="container max-w-[1440px] w-full mx-auto relative isolate px-4 md:px-32 py-8">
         {/* Two columns Container */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-1">
           {/* Left Column */}
           <div className="basis-2/5">
             <div className="w-full text-center">
@@ -46,7 +46,7 @@ function HeroMaleviz() {
               height={513}
               width={438}
               alt="Image"
-              src={heroImage}
+              src={heroImageOl}
               loading="eager"
               objectFit="cover"
             />
