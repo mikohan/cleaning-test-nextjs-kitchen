@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import heroImageOl from "@/public/images/hero_ol2_768.png";
 import GradientOne from "./GradientOne";
 import { GoogleStars } from "./GoogleStars";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
@@ -12,7 +11,7 @@ function HeroMaleviz({ src }: ImgSrc) {
     <div>
       <div className="container max-w-[1440px] w-full h-full mx-auto relative isolate px-4 md:px-32 py-8">
         {/* Two columns Container */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-1 h-full">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 h-full">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="w-full text-center">
@@ -41,7 +40,7 @@ function HeroMaleviz({ src }: ImgSrc) {
               </button>
             </div>
           </div>
-          <div className="relative w-full md:w-1/2 h-[350px] md:h-[600px]">
+          <div className="relative w-full md:w-1/2 h-[450px] md:h-[600px]">
             <Image
               fetchPriority="high"
               src={src?.src}

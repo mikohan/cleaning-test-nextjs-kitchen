@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { HeroMaleviz } from "./HeroMaleviz";
 import { ThemeToggler } from "./ThemeToggler";
 import heroImageOl from "@/public/images/hero_ol2_768.png";
-import heroImageDark from "@/public/images/hero.png";
+import heroImageDark from "@/public/images/hero_ol2_768_dark_ps.png";
 
 function ThemeCheenger() {
   const [theme, setTheme] = useState("light");
