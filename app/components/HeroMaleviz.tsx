@@ -8,15 +8,15 @@ function HeroMaleviz() {
   //   const [show, setShow] = useState(true);
   return (
     <div>
-      <div className="container max-w-[1440px] w-full mx-auto relative isolate px-4 md:px-32 py-8">
+      <div className="container max-w-[1440px] w-full h-full mx-auto relative isolate px-4 md:px-32 py-8">
         {/* Two columns Container */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-1">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-1 h-full">
           {/* Left Column */}
           <div className="basis-2/5">
             <div className="w-full text-center">
               <GoogleStars />
             </div>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-center mx-auto max-w-[80%] mt-4 tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-center mx-auto max-w-[90%] mt-4 tracking-tight">
               <RoughNotationGroup show={true}>
                 <RoughNotation
                   type="circle"
@@ -39,23 +39,22 @@ function HeroMaleviz() {
               </button>
             </div>
           </div>
-          <div className="relative w-full basis-3/5 max-w-[350px] md:max-w-full">
+          <div className="relative h-[600px] w-60 basis-3/5  border border-blue-500">
             <Image
               // className="w-full h-full top-0 left-0 object-cover"
-              className="block mx-auto"
-              height={513}
-              width={438}
+              className="mx-auto object-cover border border-red-500"
               alt="Image"
               src={heroImageOl}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
               loading="eager"
-              objectFit="cover"
+              fill
             />
-            <button className="border-2 bg-white border-amber-500 rounded-4xl px-4 py-2 font-semibold absolute top-[60%] left-[0%] md:left-[20%]">
+            {/* <button className="border-2 bg-white border-amber-500 rounded-4xl px-4 py-2 font-semibold absolute top-[60%] left-[0%] md:left-[20%]">
               1000+ Jobs done
-            </button>
+            </button> */}
           </div>
         </div>
-        <GradientOne />
+        {/* <GradientOne /> */}
       </div>
     </div>
   );
