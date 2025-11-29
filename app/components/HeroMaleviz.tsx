@@ -46,7 +46,7 @@ function HeroMaleviz({ src }: ImgSrc) {
               src={src?.src}
               priority
               alt="some"
-              sizes="(max-width: 250px) 140px, (max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
+              sizes="(max-width: 460px) 360px, (max-width: 768px) 50vw, 380px"
               className="object-cover"
               fill
             />
