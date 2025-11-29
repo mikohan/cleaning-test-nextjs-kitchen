@@ -2,10 +2,17 @@
 import { useEffect, useState } from "react";
 import { HeroMaleviz } from "./HeroMaleviz";
 import { ThemeToggler } from "./ThemeToggler";
-function ThemeChecker() {
+import heroImageOl from "@/public/images/hero_ol2_768.png";
+import heroImageDark from "@/public/images/hero.png";
+
+function ThemeCheenger() {
   const [theme, setTheme] = useState("light");
+  const [src, setSrc] = useState(heroImageOl);
+
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
+    const newSrc = src === heroImageOl ? heroImageDark : heroImageOl;
+    setSrc(newSrc);
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
@@ -33,8 +40,8 @@ function ThemeChecker() {
         </div>
       </div>
       {/* Starting Hero Component */}
-      <HeroMaleviz />
+      <HeroMaleviz src={src} />
     </div>
   );
 }
-export { ThemeChecker };
+export { ThemeCheenger };

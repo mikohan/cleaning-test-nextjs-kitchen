@@ -1,10 +1,12 @@
-import Image from "next/image";
-import heroImage from "@/public/images/hero.png";
-import heroImageOl from "@/public/images/hero_ol2.png";
+import Image, { StaticImageData } from "next/image";
+import heroImageOl from "@/public/images/hero_ol2_768.png";
 import GradientOne from "./GradientOne";
 import { GoogleStars } from "./GoogleStars";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-function HeroMaleviz() {
+type ImgSrc = {
+  src: StaticImageData;
+};
+function HeroMaleviz({ src }: ImgSrc) {
   //   const [show, setShow] = useState(true);
   return (
     <div>
@@ -12,7 +14,7 @@ function HeroMaleviz() {
         {/* Two columns Container */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-1 h-full">
           {/* Left Column */}
-          <div className="basis-2/5">
+          <div className="w-full md:w-1/2">
             <div className="w-full text-center">
               <GoogleStars />
             </div>
@@ -39,22 +41,22 @@ function HeroMaleviz() {
               </button>
             </div>
           </div>
-          <div className="relative h-[600px] w-60 basis-3/5  border border-blue-500">
+          <div className="relative w-full md:w-1/2 h-[350px] md:h-[600px]">
             <Image
-              // className="w-full h-full top-0 left-0 object-cover"
-              className="mx-auto object-cover border border-red-500"
-              alt="Image"
-              src={heroImageOl}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-              loading="eager"
+              fetchPriority="high"
+              src={src?.src}
+              priority
+              alt="some"
+              sizes="(max-width: 250px) 140px, (max-width: 768px) 100vw, (max-width: 1440px) 50vw, 33vw"
+              className="object-cover"
               fill
             />
-            {/* <button className="border-2 bg-white border-amber-500 rounded-4xl px-4 py-2 font-semibold absolute top-[60%] left-[0%] md:left-[20%]">
+            <button className="border-2 bg-white/50 border-amber-500 rounded-4xl px-4 py-2 font-semibold absolute bottom-[5%]  left-[50%] md:-left-[5%]">
               1000+ Jobs done
-            </button> */}
+            </button>
           </div>
         </div>
-        {/* <GradientOne /> */}
+        <GradientOne />
       </div>
     </div>
   );

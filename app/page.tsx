@@ -1,5 +1,5 @@
 import HeroTailwind from "@/app/components/HeroTailwind";
-import { ThemeChecker } from "./components/ThemeChecker";
+import { ThemeCheenger } from "./components/ThemeChanger";
 import MyHeader from "@/app/components/MyHeader";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       {/* <MyHeader /> */}
       {/* <HeroTailwind /> */}
-      <ThemeChecker />
+      <ThemeCheenger />
     </main>
   );
 }
