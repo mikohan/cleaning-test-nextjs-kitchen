@@ -15,7 +15,7 @@ function HeroMaleviz({ src }: ImgSrc) {
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="w-full text-center">
-              <GoogleStars />
+              <GoogleStars starsCount={5} rating="4.99" text="AVERAGE RATING" />
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold text-center mx-auto max-w-[90%] mt-4 tracking-tight">
               <RoughNotationGroup show={true}>
@@ -46,7 +46,7 @@ function HeroMaleviz({ src }: ImgSrc) {
               src={src?.src}
               priority
               alt="some"
-              sizes="(max-width: 460px) 360px, (max-width: 768px) 50vw, 380px"
+              sizes="(max-width: 400px) 380px, (max-width: 768px) 50vw, 380px"
               className="object-cover"
               fill
             />
