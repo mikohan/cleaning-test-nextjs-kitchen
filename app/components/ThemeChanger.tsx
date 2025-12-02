@@ -4,6 +4,7 @@ import { HeroMaleviz } from "./HeroMaleviz";
 import { ThemeToggler } from "./ThemeToggler";
 import heroImageOl from "@/public/images/hero_ol2_768.png";
 import heroImageDark from "@/public/images/hero_ol2_768_dark_ps.png";
+import { Testimonials } from "./Testimonials";
 
 function ThemeCheenger() {
   const [theme, setTheme] = useState("light");
@@ -41,6 +42,7 @@ function ThemeCheenger() {
       </div>
       {/* Starting Hero Component */}
       <HeroMaleviz src={src} />
+      <Testimonials />
     </div>
   );
 }
