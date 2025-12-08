@@ -17,24 +17,30 @@ function HeroMaleviz({ src }: ImgSrc) {
             <div className="w-full text-center">
               <GoogleStars starsCount={5} rating="4.99" text="AVERAGE RATING" />
             </div>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-center mx-auto max-w-[90%] mt-4 tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-bold  mx-auto mt-4 tracking-tight">
               <RoughNotationGroup show={true}>
+                <div>Stop Cleaning. Start Living. </div>Get{" "}
                 <RoughNotation
                   type="circle"
                   color="#51a2ff"
-                  padding={10}
+                  padding={1}
                   strokeWidth={2}
                 >
                   Professional{" "}
                 </RoughNotation>
-                <span className="text-blue-400">Kitchen</span> Deep Cleaning
-                Service
+                <span>
+                  Cleaning From $79 and Join the 100+ Families Who Delegate
+                  Smart{" "}
+                </span>
               </RoughNotationGroup>
             </h1>
-            <h2 className="text-center text-sm max-w-[80%] mx-auto mt-4">
-              The Best Cleaning Service in LA
+            <h2 className="text-md mx-auto mt-4">
+              Scrubbing toilets instead of spending time on what matters? Our
+              background-checked cleaners bring all supplies, and equipment,
+              handle everything you hate, and show up reliably—giving you 200+
+              hours back this year, guaranteed.
             </h2>
-            <div className="w-full px-16 text-center mt-8">
+            <div className="w-full  mt-8">
               <button className="btn btn-primary rounded-3xl bg-blue-600 border-0 min-w-[262px]">
                 Book now!
               </button>
