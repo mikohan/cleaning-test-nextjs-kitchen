@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="sticky top-0">
       <div className="py-4">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex items-center justify-between px-6 border border-red-400">
             <Image alt="Logo" src={Logo} width={40} height={40} />
             <Image
