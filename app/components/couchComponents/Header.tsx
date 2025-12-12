@@ -9,6 +9,7 @@ function Header() {
         <div className="container mx-auto">
           <div className="flex items-center justify-between px-6 border border-red-400">
             <Image alt="Logo" src={Logo} width={40} height={40} />
+            <p>AngaraSteamers</p>
             <Image
               className="md:hidden"
               alt="Icon menu"
