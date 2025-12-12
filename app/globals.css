@@ -47,5 +47,5 @@ body,
   --font-blauerSemibold: Blauer Nue Semibold, sans-serif;
 }
 .btn {
-  @apply bg-couchBlue inline-flex w-full max-w-[300px] justify-center text-white rounded-2xl px-8 py-4 mt-16 tracking-tight;
+  @apply bg-couchBlue inline-flex w-full md:max-w-[300px] justify-center text-white rounded-2xl px-8 py-4 mt-16 tracking-tight;
 }
