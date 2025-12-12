@@ -8,8 +8,10 @@ function Header() {
       <div className="py-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-between px-6 border border-red-400">
-            <Image alt="Logo" src={Logo} width={40} height={40} />
-            <p>AngaraSteamers</p>
+            <div className="inline-flex gap-0 items-center">
+              <Image alt="Logo" src={Logo} width={40} height={40} />
+              <p>AngaraSteamers</p>
+            </div>
             <Image
               className="md:hidden"
               alt="Icon menu"
