@@ -1,3 +1,22 @@
+@font-face {
+  font-family: Blauer Nue Regular;
+  src: url("/public/fonts/Blauer-Nue-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Blauer Nue Medium;
+  src: url("/public/fonts/Blauer-Nue-Medium.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Blauer Nue Semibold;
+  src: url("/public/fonts/Blauer-Nue-Semibold.otf");
+  font-weight: 400;
+  font-style: normal;
+}
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake, aqua;
@@ -12,8 +31,16 @@ body,
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-couchDarkBlue: #001731;
+  --color-couchYellow: #f1a501;
+  --color-couchBlue: #006fee;
+  --color-couchLightBlue: #e6f1fe;
+  --color-couchShadow: #7c7c7c;
   --font-sans: var(--font-lato-sans);
   --font-mono: var(--font-lato-mono);
   --font-display: "Lato", sans-serif;
   --font-poppins: Poppins, sans-serif;
+  --font-blauerRegular: Blauer Nue Regular, sans-serif;
+  --font-blauerMedium: Blauer Nue Medium, sans-serif;
+  --font-blauerSemibold: Blauer Nue Semibold, sans-serif;
 }
