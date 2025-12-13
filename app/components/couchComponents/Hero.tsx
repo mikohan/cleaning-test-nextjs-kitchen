@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <section className="pt-8 md:pt-16 pb-16 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#e6f1fe_50%,#ffffff)]">
+    <section className="pt-8 md:pt-16 pb-16 bg-gradient">
       <div className="container max-w-7xl mx-auto px-6">
         {/* Wrapper for text and image */}
         <div className="md:flex justify-center ">
@@ -18,7 +18,7 @@ function Hero() {
             </div>
             {/* Wrapper for text and button without rating */}
             <div className="flex flex-col md:items-center md:w-full">
-              <h1 className="md:leading-14 mt-4 md:mt-32 text-3xl md:text-5xl font-bold tracking-tight bg-linear-to-b from-couchDarkBlue to-couchGradientBlue text-transparent bg-clip-text">
+              <h1 className="md:leading-14 mt-4 md:mt-32 text-3xl md:text-5xl font-bold font-gradient">
                 Couch and Upholstery Steam Cleaning in LA
               </h1>
               <h3 className="mx-8 text-lg md:text-2xl font-blauerRegular text-couchDarkBlue/70 tracking-tight leading-4.5 mt-4 md:mt-8">

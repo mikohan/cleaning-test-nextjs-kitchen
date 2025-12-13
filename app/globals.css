@@ -52,3 +52,12 @@ body,
 .perks-ticker-image {
   @apply h-14 w-auto opacity-70;
 }
+.font-gradient {
+  @apply bg-linear-to-b from-couchDarkBlue to-couchGradientBlue text-transparent bg-clip-text tracking-tight;
+}
+.subheader {
+  @apply font-blauerRegular text-couchDarkBlue/70 text-lg md:text-2xl tracking-tight;
+}
+.bg-gradient {
+  @apply bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#e6f1fe_50%,#ffffff)];
+}
