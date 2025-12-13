@@ -30,7 +30,7 @@ export const Problem = () => (
         <h3 className="subheader text-center mt-4">
           We bring it back—fast, safe, professional
         </h3>
-        <div className="mt-16 flex flex-col font-blauerRegular">
+        <div className="mt-16 flex flex-col md:flex-row md:gap-8 font-blauerRegular">
           {problems.map((obj, i) => (
             <div key={i} className="">
               <div className="relative h-50 w-full mb-4">
