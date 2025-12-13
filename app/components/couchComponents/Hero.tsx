@@ -31,7 +31,7 @@ function Hero() {
                   <span className="relative z-10">Book appointment</span>
                 </button>
                 <div className="hidden md:inline-flex items-center gap-4 group hover:scale-105 transition-transform duration-300 cursor-pointer">
-                  <div className="border-4 border-couchBlue/50 h-[75px] w-[75px] rounded-full flex items-ceter justify-center bg-transparent shadow-md">
+                  <div className="border-4 border-couchBlue/50 aspect-square h-[75px] w-[75px] rounded-full flex items-ceter justify-center bg-transparent shadow-md">
                     <Image
                       src={VideoIcon}
                       height={24}
@@ -53,7 +53,7 @@ function Hero() {
                 src={VideoImage}
                 priority
                 alt="some"
-                className=""
+                className="rounded-4xl"
                 fill
               />
             </div>

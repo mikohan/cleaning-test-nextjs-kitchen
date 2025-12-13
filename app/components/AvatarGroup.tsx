@@ -1,10 +1,9 @@
 import Image from "next/image";
+import Ava1 from "@/public/images/couch/ava1.png";
+import Ava2 from "@/public/images/couch/ava2.png";
+import Ava3 from "@/public/images/couch/ava3.png";
 function AvatarGroup() {
-  const avatarArr = [
-    "https://img.daisyui.com/images/profile/demo/batperson@192.webp",
-    "https://img.daisyui.com/images/profile/demo/batperson@192.webp",
-    "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp",
-  ];
+  const avatarArr = [Ava1, Ava2, Ava3];
 
   return (
     <div className="avatar-group -space-x-4 -md:space-x-6 h-8 md:h-auto">

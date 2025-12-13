@@ -49,3 +49,6 @@ body,
 .btn {
   @apply bg-couchBlue inline-flex w-full md:max-w-[400px] justify-center text-white rounded-2xl px-16 py-8 mt-16 md:mt-0 font-blauerRegular text-xl;
 }
+.perks-ticker-image {
+  @apply h-14 w-auto opacity-70;
+}
