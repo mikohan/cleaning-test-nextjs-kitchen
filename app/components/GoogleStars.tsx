@@ -16,10 +16,10 @@ function GoogleStars({ rating, text, starsCount, inline = true }: GoogleProps) {
 
   return (
     <div className={`${inln} items-center`}>
-      <div>
+      <div className="inline-flex gap-1">
         {new Array(cnt).fill(0).map((_, i) => (
-          <div className="inline-flex" key={i}>
-            <Image height={16} width={16} src={Star} alt="Review stars" />
+          <div key={i}>
+            <Image height={20} width={20} src={Star} alt="Review stars" />
           </div>
         ))}
       </div>
