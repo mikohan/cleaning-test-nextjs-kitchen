@@ -11,8 +11,7 @@ interface GoogleProps {
 function GoogleStars({ rating, text, starsCount, inline = true }: GoogleProps) {
   const rat = rating ?? "4.99";
   const cnt = starsCount ?? 5;
-  const inln = inline ? "inline-flex gap-2" : "block";
-  console.log(inln);
+  const inln = inline ? "flex gap-2" : "block";
 
   return (
     <div className={`${inln} items-center`}>

@@ -4,12 +4,13 @@ import { Hero } from "../components/couchComponents/Hero";
 import { Prices } from "../components/couchComponents/Prices";
 import { Problem } from "../components/couchComponents/Problem";
 import { WhyUs } from "../components/couchComponents/WhyUs";
+import { Footer } from "../components/Footer";
 import { LogoTicker } from "../components/LogoTicker";
 import { Testimonials } from "../components/Testimonials";
 
 export default function AboutPage() {
   return (
-    <div className="font-blauerRegular text-couchDarkBlue pb-64">
+    <div className="font-blauerRegular text-couchDarkBlue">
       <Header />
       <Hero />
       <LogoTicker />
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <Prices />
       <Testimonials />
       <CallToAction color="yellow" />
+      <Footer />
     </div>
   );
 }

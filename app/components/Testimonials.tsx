@@ -3,7 +3,6 @@ import { ITestimonial, testimonials } from "@/app/data";
 import { Tag } from "./SmallComponents/Tag";
 import Image from "next/image";
 import { GoogleStars } from "./GoogleStars";
-import { clsx } from "clsx";
 import { motion } from "framer-motion";
 
 const TestimonialsColumn = (props: {

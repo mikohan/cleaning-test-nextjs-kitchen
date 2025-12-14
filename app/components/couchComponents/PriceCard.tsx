@@ -6,7 +6,6 @@ export const PriceCard = ({ img, category, items }: IPrice) => (
     {/* Image and absolute text */}
     <div className="h-70 w-auto relative">
       <Image
-        quality={90}
         className="object-cover rounded-4xl"
         fill
         alt={category}

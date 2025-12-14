@@ -6,23 +6,23 @@ export const ProcessSmall = () => (
       We perform a 4-step deep cleaning procedure for your couch that includes:
     </h2>
     <ul className="text-xl md:text-2xl font-blauerMedium text-couchBlue flex flex-col gap-4">
-      <li className="inline-flex gap-2 items-center">
+      <li className="flex gap-2 items-center">
         <Image alt="done icon" src={DoneIcone} height={24} width={24} />
         <div>Eco-Shampoo Treatment</div>
       </li>
-      <li className="inline-flex gap-2 items-center">
+      <li className="flex gap-2 items-center">
         <Image alt="done icon" src={DoneIcone} height={24} width={24} />
         <div>Stain & Odor Removal</div>
       </li>
-      <li className="inline-flex gap-2 items-center">
+      <li className="flex gap-2 items-center">
         <Image alt="done icon" src={DoneIcone} height={24} width={24} />
         <div>200°F Steam Cleaning</div>
       </li>
-      <li className="inline-flex gap-2 items-center">
+      <li className="flex gap-2 items-center">
         <Image alt="done icon" src={DoneIcone} height={24} width={24} />
         <div>Full Sanitizing</div>
       </li>
-      <li className="inline-flex gap-2 items-center">
+      <li className="flex gap-2 items-center">
         <Image alt="done icon" src={DoneIcone} height={24} width={24} />
         <div>
           <a href="https://share.google/oDULc3KpCXQC52z9f">4.9 Google Rated</a>
