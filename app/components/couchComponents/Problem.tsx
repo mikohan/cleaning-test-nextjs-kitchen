@@ -1,22 +1,7 @@
-import ProblemImage1 from "@/public/images/couch/problem1.jpg";
-import ProblemImage2 from "@/public/images/couch/problem2.jpg";
-import ProblemImage3 from "@/public/images/couch/problem3.jpg";
 import Image from "next/image";
+import { problems } from "@/app/data"; // Array of texts and images
+import { ProcessSmall } from "./ProcessSmall";
 
-const problems = [
-  {
-    text: "Got a dirty, smelly couch? We make it look new—saving you money and giving it years more life.",
-    img: ProblemImage1,
-  },
-  {
-    text: "Spills and stains on your couch? We clean it right—removing mess and smells fast, so it lasts longer.",
-    img: ProblemImage2,
-  },
-  {
-    text: "Pet mess on the couch? We remove stains and odors fast—restoring freshness and protecting it for years.",
-    img: ProblemImage3,
-  },
-];
 export const Problem = () => (
   <section className="bg-gradient">
     <div className="px-6 container mx-auto">
@@ -33,7 +18,7 @@ export const Problem = () => (
         <div className="mt-16 flex flex-col md:flex-row md:gap-8 font-blauerRegular">
           {problems.map((obj, i) => (
             <div key={i} className="">
-              <div className="relative h-50 w-full mb-4">
+              <div className="relative h-60 w-full mb-4">
                 <Image
                   alt={`Image of problem we solve-${i}`}
                   src={obj.img}
@@ -45,6 +30,7 @@ export const Problem = () => (
             </div>
           ))}
         </div>
+        <ProcessSmall />
       </div>
     </div>
   </section>

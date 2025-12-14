@@ -1,5 +1,6 @@
 import { Header } from "../components/couchComponents/Header";
 import { Hero } from "../components/couchComponents/Hero";
+import { Prices } from "../components/couchComponents/Prices";
 import { Problem } from "../components/couchComponents/Problem";
 import { WhyUs } from "../components/couchComponents/WhyUs";
 import { LogoTicker } from "../components/LogoTicker";
@@ -12,6 +13,7 @@ export default function AboutPage() {
       <LogoTicker />
       <Problem />
       <WhyUs />
+      <Prices />
     </div>
   );
 }
