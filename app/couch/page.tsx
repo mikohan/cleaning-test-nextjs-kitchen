@@ -1,3 +1,4 @@
+import { CallToAction } from "../components/couchComponents/CallToAction";
 import { Header } from "../components/couchComponents/Header";
 import { Hero } from "../components/couchComponents/Hero";
 import { Prices } from "../components/couchComponents/Prices";
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <WhyUs />
       <Prices />
       <Testimonials />
+      <CallToAction color="yellow" />
     </div>
   );
 }
