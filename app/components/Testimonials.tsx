@@ -64,7 +64,7 @@ function Testimonials() {
             Check it here.
           </a>
         </p>
-        <div className="flex justify-center gap-6 mt-4 mask-[linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[768px] overflow-hidden">
+        <div className="flex justify-center gap-6 mt-4 mask-[linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[868px] overflow-hidden">
           <TestimonialsColumn testimonials={firstCol} duration={17} />
           <TestimonialsColumn
             duration={27}
