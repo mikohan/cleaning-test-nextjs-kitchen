@@ -61,3 +61,6 @@ body,
 .bg-gradient {
   @apply bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#e6f1fe_50%,#ffffff)];
 }
+.card {
+  @apply p-8 rounded-3xl shadow-xl max-w-sm w-full;
+}

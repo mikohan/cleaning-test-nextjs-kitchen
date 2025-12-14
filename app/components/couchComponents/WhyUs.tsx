@@ -2,6 +2,7 @@ import Image from "next/image";
 import DoneIcon from "@/public/images/couch/done.svg";
 import ShieldIcon from "@/public/images/couch/sheild.svg";
 import WalletdIcon from "@/public/images/couch/wallet.svg";
+import { Tag } from "../SmallComponents/Tag";
 
 export const WhyUs = () => {
   return (
@@ -9,9 +10,7 @@ export const WhyUs = () => {
       <div className="container px-6 mx-auto">
         {/* Vertical flex for all boxes on the page. */}
         <div className="flex flex-col justify-center items-center mt-8">
-          <div className="mt-8 inline-flex justify-center w-64 py-2 px-4 border border-couchDarkBlue/50 rounded-2xl text-couchDarkBlue/50">
-            Safe for Pets and Children
-          </div>
+          <Tag text="Safe for Pets and Children" />
           <h2 className="mt-12 text-3xl md:text-5xl font-gradient font-blauerSemibold text-center font-gradient">
             Why us
           </h2>

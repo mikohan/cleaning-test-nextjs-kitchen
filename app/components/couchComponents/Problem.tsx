@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { problems } from "@/app/data"; // Array of texts and images
 import { ProcessSmall } from "./ProcessSmall";
+import { Tag } from "../SmallComponents/Tag";
 
 export const Problem = () => (
   <section className="bg-gradient">
     <div className="px-6 container mx-auto">
       <div className="flex flex-col justify-center items-center">
-        <div className="mt-8 inline-flex justify-center w-64 py-2 px-4 border border-couchDarkBlue/50 rounded-2xl text-couchDarkBlue/50">
-          Problems we solve
-        </div>
+        <Tag text="Problems We Solve" />
         <h2 className="mt-8 text-3xl md:text-5xl font-gradient font-blauerSemibold text-center tracking-tight">
           Think your couch is ruined?
         </h2>

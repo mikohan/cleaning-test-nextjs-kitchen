@@ -4,6 +4,7 @@ import { Prices } from "../components/couchComponents/Prices";
 import { Problem } from "../components/couchComponents/Problem";
 import { WhyUs } from "../components/couchComponents/WhyUs";
 import { LogoTicker } from "../components/LogoTicker";
+import { Testimonials } from "../components/Testimonials";
 
 export default function AboutPage() {
   return (
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <Problem />
       <WhyUs />
       <Prices />
+      <Testimonials />
     </div>
   );
 }

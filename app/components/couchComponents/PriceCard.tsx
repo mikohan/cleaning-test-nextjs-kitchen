@@ -2,7 +2,7 @@ import Image from "next/image";
 import { IPrice } from "@/app/data";
 
 export const PriceCard = ({ img, category, items }: IPrice) => (
-  <div className="bg-white rounded-4xl p-4">
+  <div className="bg-white rounded-4xl p-4 shadow-xl">
     {/* Image and absolute text */}
     <div className="h-70 w-auto relative">
       <Image
