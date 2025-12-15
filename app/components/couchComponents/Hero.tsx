@@ -3,6 +3,7 @@ import { AvatarGroup } from "../AvatarGroup";
 import VideoImage from "@/public/images/couch/hero.jpg";
 import VideoIcon from "@/public/images/couch/video-icon.svg";
 import Image from "next/image";
+// import { ButtonBtn } from "../SmallComponents/ButtonBtn";
 import { ButtonShiny } from "../SmallComponents/ButtonShiny";
 
 function Hero() {
@@ -27,10 +28,8 @@ function Hero() {
                 & money.
               </h3>
               <div className="w-full md:flex md:gap-4 md:mt-40 md:items-center">
-                <button className="relative btn hover:scale-105 transition-transform duration-300 group overflow-hidden drop-shadow-sm">
-                  <span className="absolute inset-0 bg-white opacity-30 rotate-45 -translate-x-full group-hover:translate-x-full blur-sm transition-transform duration-500"></span>
-                  <span className="relative z-10">Book appointment</span>
-                </button>
+                {/* <ButtonBtn /> */}
+                <ButtonShiny text="Schedule Cleaning now" />
                 <div className="hidden md:inline-flex items-center gap-4 group hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <div className="border-4 border-couchBlue/50 aspect-square h-[75px] w-[75px] rounded-full flex items-ceter justify-center bg-transparent shadow-md">
                     <Image

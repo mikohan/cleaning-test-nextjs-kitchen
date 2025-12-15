@@ -1,6 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-export const ButtonShiny = () => {
+
+type Props = {
+  text: string;
+};
+export const ButtonShiny = ({ text }: Props) => {
   return (
     <motion.button
       className="px-8 py-4 rounded-2xl relative radial-gradient text-xl font-blauerMedium"
@@ -24,7 +28,7 @@ export const ButtonShiny = () => {
       }}
     >
       <span className="text-white tracking-wide font-light h-full w-full block relative linear-mask">
-        Start now
+        {text}
       </span>
       <span className="block absolute inset-0 rounded-2xl p-1 linear-overlay"></span>
     </motion.button>

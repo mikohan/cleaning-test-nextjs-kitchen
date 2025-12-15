@@ -4,9 +4,22 @@ import YoutubeIcon from "@/public/images/couch/social_icons/youtube-negative.svg
 import FacebookIcon from "@/public/images/couch/social_icons/facebook-negative.svg";
 import TikTokIcon from "@/public/images/couch/social_icons/tiktok-negative.svg";
 import Logo from "@/public/images/couch/logo-text-white.png";
-export const Footer = () => {
+import { ArrowUpSVG } from "./SmallComponents/ArrowUpSVG";
+
+type props = {
+  handleClick: () => void;
+};
+export const Footer = ({ handleClick }: props) => {
   return (
-    <section className="bg-couchDarkBlue">
+    <section className="bg-couchDarkBlue relative">
+      <div className="absolute -top-32 right-4 w-full pr-4 h-auto flex justify-end animate-pulse">
+        <button
+          className="h-24 w-24 aspect-square rounded-full bg-couchBlue/25 cursor-pointer border-4 border-couchBlue/30 flex justify-center items-center group hover:scale-105   transform duration-300 ease-in-out"
+          onClick={handleClick}
+        >
+          <ArrowUpSVG className="text-couchLightBlue/70 w-8 h-8" />
+        </button>
+      </div>
       <div className="container px-6 py-4 mx-auto">
         <div className="flex flex-col items-center gap-4">
           <Image src={Logo} alt="bottom logo" />

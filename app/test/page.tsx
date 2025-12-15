@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="container max-w-4xl mx-auto">
       <div className="flex justify-center items-center h-32 w-full border border-amber-100">
-        <ButtonShiny />
+        <ButtonShiny text="Schedule cleaning" />
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="w-full md:w-1/2">

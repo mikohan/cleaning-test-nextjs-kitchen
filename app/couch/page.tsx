@@ -8,7 +8,6 @@ import { WhyUs } from "../components/couchComponents/WhyUs";
 import { Footer } from "../components/Footer";
 import { LogoTicker } from "../components/LogoTicker";
 import { Testimonials } from "../components/Testimonials";
-import { ArrowUpSVG } from "../components/SmallComponents/ArrowUpSVG";
 import { useLenis } from "lenis/react";
 
 export default function AboutPage() {
@@ -29,15 +28,7 @@ export default function AboutPage() {
       <Prices />
       <Testimonials />
       <CallToAction color="yellow" />
-      <div className="sticky bottom-12 right-4 w-full pr-4 h-auto flex justify-end ">
-        <button
-          className="h-24 w-24 aspect-square rounded-full bg-couchBlue/25 cursor-pointer border-4 border-couchBlue/30 flex justify-center items-center group hover:scale-105   transform duration-300 ease-in-out"
-          onClick={handleClick}
-        >
-          <ArrowUpSVG className="text-couchLightBlue/70 w-8 h-8" />
-        </button>
-      </div>
-      <Footer />
+      <Footer handleClick={handleClick} />
     </div>
   );
 }
