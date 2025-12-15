@@ -78,7 +78,7 @@ body,
       rgba(250, 250, 250, 0.05) 0%,
       transparent 60%
     ),
-    rgba(0, 11, 238, 1);
+    rgba(0, 11, 238, 0.7);
 }
 .linear-mask {
   mask-image: linear-gradient(

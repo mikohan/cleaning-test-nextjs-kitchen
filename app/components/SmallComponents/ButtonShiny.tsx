@@ -1,13 +1,18 @@
 "use client";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
 type Props = {
   text: string;
+  className?: string;
 };
-export const ButtonShiny = ({ text }: Props) => {
+export const ButtonShiny = ({ text, className }: Props) => {
   return (
     <motion.button
-      className="px-8 py-4 rounded-2xl relative radial-gradient text-xl font-blauerMedium"
+      className={clsx(
+        "px-8 py-4 rounded-2xl relative radial-gradient text-xl font-blauerMedium",
+        className
+      )}
       initial={{ "--x": "100%" }}
       animate={{ "--x": "-100%" }}
       whileTap={{ scale: 0.95 }}

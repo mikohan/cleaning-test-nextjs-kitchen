@@ -1,3 +1,4 @@
+import { ButtonShiny } from "../SmallComponents/ButtonShiny";
 type CallToActionProp = {
   color?: string;
 };
@@ -13,7 +14,8 @@ export const CallToAction = ({ color }: CallToActionProp) => {
             Fast, safe, professional steam cleanig.
           </p>
           <div className="mt-8">
-            <button className={btnClass}>Schedule Cleaning</button>
+            {/* <button className={btnClass}>Schedule Cleaning</button> */}
+            <ButtonShiny text="Schedule Cleaning now" />
           </div>
         </div>
       </div>
