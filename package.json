@@ -6,20 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3011",
-    "lint": "eslint"
+    "lint": "eslint",
+    "email": "email dev -p 4000"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@react-email/components": "1.0.1",
+    "@react-email/render": "^2.0.0",
+    "@react-email/tailwind": "^2.0.1",
     "@turahe/react-rough-notation": "^2.0.2",
     "framer-motion": "^12.23.26",
     "lenis": "^1.3.16",
     "next": "16.0.5",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-rough-notation": "^1.0.8"
+    "react-rough-notation": "^1.0.8",
+    "resend": "^6.6.0"
   },
   "devDependencies": {
+    "@react-email/preview-server": "^5.0.8",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -27,6 +33,7 @@
     "daisyui": "^5.5.5",
     "eslint": "^9",
     "eslint-config-next": "16.0.5",
+    "react-email": "5.0.8",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,4 +1,5 @@
-import ProblemImage1 from "@/public/images/couch/problem1.jpg";
+// Images problem
+import ProblemImage1 from "@/public/images/couch/before-after-crop.jpg";
 import ProblemImage2 from "@/public/images/couch/problem2.jpg";
 import ProblemImage3 from "@/public/images/couch/problem3.jpg";
 

@@ -3,10 +3,11 @@ import DoneIcon from "@/public/images/couch/done.svg";
 import ShieldIcon from "@/public/images/couch/sheild.svg";
 import WalletdIcon from "@/public/images/couch/wallet.svg";
 import { Tag } from "../SmallComponents/Tag";
+import ReviewsMeImage from "@/public/images/couch/me-rewiew-cropped.png";
 
 export const WhyUs = () => {
   return (
-    <section>
+    <section className="bg-gradient pb-16 md:pb-32">
       <div className="container px-6 mx-auto">
         {/* Vertical flex for all boxes on the page. */}
         <div className="flex flex-col justify-center items-center mt-8">
@@ -18,7 +19,7 @@ export const WhyUs = () => {
             Helped 1000+ families - fast, safe, professional
           </h3>
           {/* Box for bulleted list */}
-          <div className="md:flex md:flex-row md:gap-8 md:mt-16">
+          <div className="md:flex md:flex-row md:gap-16 md:mt-16 max-w-5xl">
             {/* Box for each bullet header and box */}
             <div className="flex flex-col gap-2 items-center justify-center mt-8">
               <div className="inline-flex gap-4 items-center">
@@ -51,7 +52,7 @@ export const WhyUs = () => {
               </p>
             </div>
             {/* Box for each bullet header and box */}
-            <div className="flex flex-col gap-2 items-center justify-center mt-8">
+            <div className="flex flex-col gap-2 items-center justify-center mt-8 ">
               <div className="inline-flex gap-4 items-center">
                 <Image
                   alt="Wallet icon"
@@ -67,6 +68,15 @@ export const WhyUs = () => {
                 If stains reappear, we return and fix it for FREE.
               </p>
             </div>
+          </div>
+          <div className="mt-16 md:mt-32 max-w-5xl">
+            <Image
+              src={ReviewsMeImage}
+              alt="Reviews"
+              width={1380}
+              height={932}
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
