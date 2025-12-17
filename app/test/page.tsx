@@ -7,21 +7,14 @@ import { GoogleStars } from "../components/GoogleStars";
 import { ButtonShiny } from "../components/SmallComponents/ButtonShiny";
 import { AnimatedButton } from "../components/SmallComponents/AnimatedButton";
 import { sendEmail } from "@/lib/resend";
-import { useActionState, useEffect, useRef, useState } from "react";
+import { useActionState, useState } from "react";
 import { FormState } from "@/lib/resend";
-import { ModalDaisy } from "../components/ModalDaisy";
 
 export default function AboutPage() {
-  const [open, setOpen] = useState(false);
   const [state, action, isLoading] = useActionState<FormState, FormData>(
     sendEmail,
     {}
   );
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage visibility
-
-  const handleOpen = () => setIsModalOpen(true);
-  const handleClose = () => setIsModalOpen(false);
-  console.log(isModalOpen);
 
   return (
     <div className="container max-w-4xl mx-auto">
@@ -114,31 +107,6 @@ export default function AboutPage() {
               <p className="text-green-500 text-sm">{state.message}</p>
             )}
           </form>
-
-          <button className="btn" onClick={handleOpen}>
-            open modal
-          </button>
-          <dialog id="my_modal_4" className="modal">
-            <div className="modal-box w-11/12 max-w-5xl">
-              <h3 className="font-bold text-lg">Hello!</h3>
-              <p className="py-4">Click the button below to close</p>
-              <div className="modal-action">
-                <form method="dialog">
-                  {/* if there is a button, it will close the modal */}
-                  <button className="btn">Close</button>
-                </form>
-              </div>
-            </div>
-          </dialog>
-          <div className="chat chat-start">
-            <div className="chat-bubble">
-              Its over Anakin,
-              <br />I have the high ground.
-            </div>
-          </div>
-          <div className="chat chat-end">
-            <div className="chat-bubble">You underestimate my power!</div>
-          </div>
         </div>
       </div>
     </div>

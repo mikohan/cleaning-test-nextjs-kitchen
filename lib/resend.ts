@@ -17,6 +17,7 @@ export const sendEmail = async (prevState: FormState, formData: FormData) => {
   const email = formData.get("email") as string;
   const username = formData.get("username") as string;
   const phone = formData.get("phone") as string;
+  const couch = formData.get("phone") as string;
   console.log("First output to console:", email, username, phone);
   try {
     const { data, error } = await resend.emails.send({
