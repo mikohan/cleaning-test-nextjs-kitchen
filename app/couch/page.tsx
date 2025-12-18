@@ -4,6 +4,7 @@ import { Header } from "../components/couchComponents/Header";
 import { Hero } from "../components/couchComponents/Hero";
 import { Prices } from "../components/couchComponents/Prices";
 import { Problem } from "../components/couchComponents/Problem";
+import { Team } from "../components/couchComponents/Team";
 import { WhyUs } from "../components/couchComponents/WhyUs";
 import { Footer } from "../components/Footer";
 import { LogoTicker } from "../components/LogoTicker";
@@ -26,8 +27,10 @@ export default function AboutPage() {
       <Problem />
       <WhyUs />
       <Prices />
-      <Testimonials />
       <CallToAction />
+      <Testimonials />
+      <Team />
+      <CallToAction className="bg-linear-to-t from-white to-couchLightBlue" />
       <Footer handleClick={handleClick} />
     </div>
   );
