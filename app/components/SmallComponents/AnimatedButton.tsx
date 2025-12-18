@@ -13,11 +13,13 @@ function AnimatedButton({
   children,
   stiffness = 300,
   damping = 15,
+  type = "button",
   className,
 }: props) {
   return (
-    <motion.div
+    <motion.button
       className={className}
+      type={type}
       whileHover={{ scale: 1.05, y: -2 }}
       whileTap={{
         scale: 0.9,
@@ -26,7 +28,7 @@ function AnimatedButton({
       transition={{ type: "spring", stiffness: stiffness, damping: damping }}
     >
       {children}
-    </motion.div>
+    </motion.button>
   );
 }
 

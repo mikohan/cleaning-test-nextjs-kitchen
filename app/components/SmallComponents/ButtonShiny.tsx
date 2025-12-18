@@ -8,7 +8,7 @@ type Props = {
 };
 export const ButtonShiny = ({ text, className }: Props) => {
   return (
-    <motion.button
+    <motion.div
       className={clsx(
         "px-8 py-4 rounded-2xl relative radial-gradient text-xl font-blauerMedium",
         className
@@ -36,6 +36,6 @@ export const ButtonShiny = ({ text, className }: Props) => {
         {text}
       </span>
       <span className="block absolute inset-0 rounded-2xl p-1 linear-overlay"></span>
-    </motion.button>
+    </motion.div>
   );
 };
