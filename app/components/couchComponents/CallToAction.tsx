@@ -1,4 +1,3 @@
-import { ButtonShiny } from "../SmallComponents/ButtonShiny";
 import { ModalDaisy } from "../ModalDaisy";
 export const CallToAction = () => {
   return (

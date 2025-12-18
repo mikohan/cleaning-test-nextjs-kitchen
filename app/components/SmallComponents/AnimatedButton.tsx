@@ -13,7 +13,6 @@ function AnimatedButton({
   children,
   stiffness = 300,
   damping = 15,
-  type = "button",
   className,
 }: props) {
   return (

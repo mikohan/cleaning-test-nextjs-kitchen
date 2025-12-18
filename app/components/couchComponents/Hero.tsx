@@ -3,8 +3,6 @@ import { AvatarGroup } from "../AvatarGroup";
 import VideoImage from "@/public/images/couch/hero.jpg";
 import VideoIcon from "@/public/images/couch/video-icon.svg";
 import Image from "next/image";
-// import { ButtonBtn } from "../SmallComponents/ButtonBtn";
-import { ButtonShiny } from "../SmallComponents/ButtonShiny";
 import { ModalDaisy } from "../ModalDaisy";
 
 function Hero() {
