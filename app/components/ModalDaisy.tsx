@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useActionState } from "react";
+import Link from "next/link";
 
 import { FormState, sendEmail } from "@/lib/resend";
 import { AnimatedButton } from "./SmallComponents/AnimatedButton";
@@ -23,7 +24,7 @@ export const ModalDaisy = () => {
 
       // 2. Execute your callback logic based on the result
       if (result.success) {
-        console.log("Success callback activated!");
+        // console.log("Success callback activated!");
         handleClose();
       }
 
@@ -32,7 +33,6 @@ export const ModalDaisy = () => {
     },
     { success: false } // Initial state
   );
-  console.log("State", state);
 
   // handling modal
   const modal = useRef<HTMLDialogElement>(null);
@@ -67,16 +67,16 @@ export const ModalDaisy = () => {
       <button className="btn" onClick={handleOpen}>
         open modal
       </button>
-      <dialog ref={modal} className="modal">
+      <dialog ref={modal} className="modal font-blauerRegular">
         <div className="w-full max-w-md p-8 bg-white rounded-2xl">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-            Couch Reservation
+          <h2 className="text-2xl font-blauerMedium text-couchDarkBlue mb-6 text-center">
+            Steam Cleaning Reservation
           </h2>
 
           <form action={action} className="space-y-5">
             {/* Name Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
                 Full Name
               </label>
               <input
@@ -88,7 +88,7 @@ export const ModalDaisy = () => {
             </div>
             {/* Email Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
                 Email
               </label>
               <input
@@ -101,7 +101,7 @@ export const ModalDaisy = () => {
 
             {/* Phone Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
                 Phone Number
               </label>
               <input
@@ -114,7 +114,7 @@ export const ModalDaisy = () => {
 
             {/* Seating Capacity Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
                 Couch Size (Capacity)
               </label>
               <input
@@ -127,7 +127,16 @@ export const ModalDaisy = () => {
                 Specify how many people can sit on the couch.
               </p>
             </div>
-
+            <p className="mt-4 text-center text-xs text-gray-500">
+              We care about your data. Read our{" "}
+              <Link
+                href="/privacy-policy"
+                className="text-blue-600 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
             {/* Action Buttons */}
             <div className="flex gap-3 pt-4">
               <button
@@ -143,7 +152,7 @@ export const ModalDaisy = () => {
                 type="submit"
               >
                 {isLoading ? (
-                  <div className="w-6 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                  <span className="loading loading-bars"></span>
                 ) : (
                   "Send"
                 )}

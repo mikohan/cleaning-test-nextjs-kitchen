@@ -1,6 +1,6 @@
 "use server";
 import { Resend } from "resend";
-import Welcome from "@/emails/Welcome";
+import Manager from "@/emails/Manager";
 
 export type FormState = {
   success?: boolean;
@@ -17,14 +17,14 @@ export const sendEmail = async (prevState: FormState, formData: FormData) => {
   const email = formData.get("email") as string;
   const username = formData.get("username") as string;
   const phone = formData.get("phone") as string;
-  const couch = formData.get("phone") as string;
+  const couch = formData.get("couch") as string;
   console.log("First output to console:", email, username, phone);
   try {
     const { data, error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: [email],
+      to: [process.env.COMPANY_EMAIL || "angaralabllc@gmail.com"],
       subject: "Hello world",
-      react: Welcome({ username, phone }),
+      react: Manager({ username, phone, email, couch }),
     });
     if (error) {
       console.error(error);
