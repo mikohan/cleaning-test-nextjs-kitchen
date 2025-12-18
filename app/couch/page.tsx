@@ -27,7 +27,7 @@ export default function AboutPage() {
       <Problem />
       <WhyUs />
       <Prices />
-      <CallToAction />
+      <CallToAction className="py-16" />
       <Testimonials />
       <Team />
       <CallToAction className="bg-linear-to-t from-white to-couchLightBlue" />

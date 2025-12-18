@@ -51,7 +51,7 @@ function Testimonials() {
         <h2 className="font-gradient h2-header mt-12">
           What our customers say
         </h2>
-        <p className="subheader text-center mt-2 px-8">
+        <p className="subheader text-center mt-2 px-8 mb-16 md:mb-32">
           Our customer love us so much. All reviews are real.
           <a
             href="4.9 Google Rated https://share.google/oDULc3KpCXQC52z9f"
