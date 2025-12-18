@@ -17,9 +17,8 @@ function AnimatedButton({
   className,
 }: props) {
   return (
-    <motion.button
+    <motion.div
       className={className}
-      type={type}
       whileHover={{ scale: 1.05, y: -2 }}
       whileTap={{
         scale: 0.9,
@@ -28,7 +27,7 @@ function AnimatedButton({
       transition={{ type: "spring", stiffness: stiffness, damping: damping }}
     >
       {children}
-    </motion.button>
+    </motion.div>
   );
 }
 

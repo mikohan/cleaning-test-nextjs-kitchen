@@ -5,6 +5,7 @@ import VideoIcon from "@/public/images/couch/video-icon.svg";
 import Image from "next/image";
 // import { ButtonBtn } from "../SmallComponents/ButtonBtn";
 import { ButtonShiny } from "../SmallComponents/ButtonShiny";
+import { ModalDaisy } from "../ModalDaisy";
 
 function Hero() {
   return (
@@ -29,10 +30,13 @@ function Hero() {
               </h3>
               <div className="w-full md:flex md:gap-4 md:mt-40 md:items-center">
                 {/* <ButtonBtn /> */}
-                <ButtonShiny
+                {/* <ButtonShiny
                   className="mt-16 md:mt-0"
                   text="Schedule Cleaning now"
-                />
+                /> */}
+                <div className="mt-16">
+                  <ModalDaisy />
+                </div>
                 <div className="hidden md:inline-flex items-center gap-4 group hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <div className="border-4 border-couchBlue/50 aspect-square h-[75px] w-[75px] rounded-full flex items-ceter justify-center bg-transparent shadow-md">
                     <Image

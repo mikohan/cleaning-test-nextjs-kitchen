@@ -9,7 +9,6 @@ import {
   Text,
   Link,
 } from "@react-email/components";
-import AvatarEmailImage from "@/public/images/avatar1.png";
 import * as React from "react";
 type WelcomeType = {
   username?: string;

@@ -27,7 +27,7 @@ export default function AboutPage() {
       <WhyUs />
       <Prices />
       <Testimonials />
-      <CallToAction color="yellow" />
+      <CallToAction />
       <Footer handleClick={handleClick} />
     </div>
   );

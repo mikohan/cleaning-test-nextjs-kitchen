@@ -7,7 +7,7 @@ import { GoogleStars } from "../components/GoogleStars";
 import { ButtonShiny } from "../components/SmallComponents/ButtonShiny";
 import { AnimatedButton } from "../components/SmallComponents/AnimatedButton";
 import { sendEmail } from "@/lib/resend";
-import { useActionState, useState } from "react";
+import { useActionState } from "react";
 import { FormState } from "@/lib/resend";
 
 export default function AboutPage() {

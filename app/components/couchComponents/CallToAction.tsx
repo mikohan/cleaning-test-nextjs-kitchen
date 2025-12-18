@@ -1,10 +1,6 @@
 import { ButtonShiny } from "../SmallComponents/ButtonShiny";
-type CallToActionProp = {
-  color?: string;
-};
-export const CallToAction = ({ color }: CallToActionProp) => {
-  let btnClass = "btn";
-  btnClass = color === "yellow" ? "btn-yellow" : "btn";
+import { ModalDaisy } from "../ModalDaisy";
+export const CallToAction = () => {
   return (
     <section className="bg-linear-to-b from-white to-couchLightBlue py-24">
       <div className="container p-6 mx-auto max-w-7xl">
@@ -13,9 +9,8 @@ export const CallToAction = ({ color }: CallToActionProp) => {
           <p className="subheader text-center mt-4">
             Fast, safe, professional steam cleanig.
           </p>
-          <div className="mt-8">
-            {/* <button className={btnClass}>Schedule Cleaning</button> */}
-            <ButtonShiny text="Schedule Cleaning now" />
+          <div className="mt-16">
+            <ModalDaisy />
           </div>
         </div>
       </div>

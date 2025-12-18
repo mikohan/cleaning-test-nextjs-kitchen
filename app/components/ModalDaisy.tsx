@@ -3,12 +3,9 @@ import Link from "next/link";
 
 import { FormState, sendEmail } from "@/lib/resend";
 import { AnimatedButton } from "./SmallComponents/AnimatedButton";
-
+import { ToastContainer, toast } from "react-toastify";
+import { ButtonShiny } from "./SmallComponents/ButtonShiny";
 export const ModalDaisy = () => {
-  // const [state, action, isLoading] = useActionState<FormState, FormData>(
-  //   sendEmail,
-  //   { success: false }
-  // );
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(true);
@@ -16,6 +13,11 @@ export const ModalDaisy = () => {
   const handleClose = () => {
     setIsOpen(false);
   };
+  const notify = () =>
+    toast.success("Email was sent successfully! I'll contact you ASAP.", {
+      position: "top-left",
+      autoClose: 5000,
+    });
 
   const [state, action, isLoading] = useActionState<FormState, FormData>(
     async (prevState: FormState, formData: FormData) => {
@@ -26,6 +28,7 @@ export const ModalDaisy = () => {
       if (result.success) {
         // console.log("Success callback activated!");
         handleClose();
+        notify();
       }
 
       // 3. Return the result so 'state' updates
@@ -64,9 +67,11 @@ export const ModalDaisy = () => {
 
   return (
     <>
-      <button className="btn" onClick={handleOpen}>
-        open modal
-      </button>
+      <div onClick={handleOpen}>
+        <AnimatedButton>
+          <ButtonShiny text="Schedule Cleaning Now"></ButtonShiny>
+        </AnimatedButton>
+      </div>
       <dialog ref={modal} className="modal font-blauerRegular">
         <div className="w-full max-w-md p-8 bg-white rounded-2xl">
           <h2 className="text-2xl font-blauerMedium text-couchDarkBlue mb-6 text-center">
@@ -161,6 +166,7 @@ export const ModalDaisy = () => {
           </form>
         </div>
       </dialog>
+      <ToastContainer toastClassName="bg-green-400 p-4 rounded-md" />
     </>
   );
 };
