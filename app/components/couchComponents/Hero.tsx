@@ -4,6 +4,7 @@ import VideoImage from "@/public/images/couch/hero.jpg";
 import VideoIcon from "@/public/images/couch/video-icon.svg";
 import Image from "next/image";
 import { ModalDaisy } from "../ModalDaisy";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 function Hero() {
   return (
@@ -19,22 +20,26 @@ function Hero() {
             </div>
             {/* Wrapper for text and button without rating */}
             <div className="flex flex-col md:items-center md:w-full">
-              <h1 className="md:leading-14 mt-4 md:mt-32 text-3xl md:text-5xl font-bold font-gradient">
-                Couch and Upholstery Steam Cleaning in LA
-              </h1>
+              <RoughNotationGroup show={true}>
+                <h1 className="md:leading-14 mt-4 md:mt-32 text-3xl md:text-5xl font-bold font-gradient">
+                  Couch and Upholstery{" "}
+                  <RoughNotation
+                    type="circle"
+                    color="#51a2ff"
+                    padding={1}
+                    strokeWidth={2}
+                  >
+                    Professional{" "}
+                  </RoughNotation>
+                  Steam Cleaning in LA
+                </h1>
+              </RoughNotationGroup>
               <h3 className="mx-8 text-lg md:text-2xl font-blauerRegular text-couchDarkBlue/70 tracking-tight leading-4.5 mt-4 md:mt-8">
                 We restore freshness, remove odors, and save you furniture time
-                & money.
+                & money. Professional, safe, fast.
               </h3>
-              <div className="w-full md:flex md:gap-4 md:mt-40 md:items-center">
-                {/* <ButtonBtn /> */}
-                {/* <ButtonShiny
-                  className="mt-16 md:mt-0"
-                  text="Schedule Cleaning now"
-                /> */}
-                <div className="mt-16">
-                  <ModalDaisy />
-                </div>
+              <div className="w-full md:flex md:gap-4 mt-16 md:mt-40 md:items-center">
+                <ModalDaisy />
                 <div className="hidden md:inline-flex items-center gap-4 group hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <div className="border-4 border-couchBlue/50 aspect-square h-[75px] w-[75px] rounded-full flex items-ceter justify-center bg-transparent shadow-md">
                     <Image
