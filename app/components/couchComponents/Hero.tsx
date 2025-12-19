@@ -4,6 +4,7 @@ import VideoImage from "@/public/images/couch/hero.jpg";
 import VideoIcon from "@/public/images/couch/video-icon.svg";
 import Image from "next/image";
 import { ModalDaisy } from "../ModalDaisy";
+import { ModalVideo } from "@/app/components/ModalVideo";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 function Hero() {
@@ -40,18 +41,7 @@ function Hero() {
               </h3>
               <div className="w-full md:flex md:gap-4 mt-16 md:mt-40 md:items-center">
                 <ModalDaisy />
-                <div className="hidden md:inline-flex items-center gap-4 group hover:scale-105 transition-transform duration-300 cursor-pointer">
-                  <div className="border-4 border-couchBlue/50 aspect-square h-[75px] w-[75px] rounded-full flex items-ceter justify-center bg-transparent shadow-md">
-                    <Image
-                      src={VideoIcon}
-                      height={24}
-                      width={24}
-                      alt="button"
-                      className="block ml-1"
-                    />
-                  </div>
-                  <div className="block">Watch Video</div>
-                </div>
+                <ModalVideo />
               </div>
             </div>
           </div>

@@ -3,11 +3,28 @@ type props = {
   autoPlay?: boolean;
   loop?: boolean;
   muted?: boolean;
+  width?: string;
+  heigh?: string;
 };
-export function VideoComponent(props: props) {
+export function VideoComponent({
+  source,
+  autoPlay = true,
+  loop = true,
+  muted = true,
+  width = "720",
+  heigh = "1280",
+}: props) {
   return (
-    <video width="320" height="240" controls preload="none" autoPlay loop muted>
-      <source src={props.source} type="video/mp4" {...props} />
+    <video
+      width={width}
+      height={heigh}
+      controls
+      preload="none"
+      autoPlay={autoPlay}
+      loop={loop}
+      muted={muted}
+    >
+      <source src={source} type="video/mp4" />
       <track
         src="/path/to/captions.vtt"
         kind="subtitles"
