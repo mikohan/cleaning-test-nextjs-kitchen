@@ -30,7 +30,7 @@ export default function AboutPage() {
       <CallToAction className="py-16" />
       <Testimonials />
       <Team />
-      <CallToAction className="bg-linear-to-t from-white to-couchLightBlue" />
+      <CallToAction className="bg-linear-to-t from-white to-couchLightBlue mb-16" />
       <Footer handleClick={handleClick} />
     </div>
   );

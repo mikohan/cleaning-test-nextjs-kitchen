@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FormState, sendEmail } from "@/lib/resend";
 import { AnimatedButton } from "./SmallComponents/AnimatedButton";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { ButtonShiny } from "./SmallComponents/ButtonShiny";
 export const ModalDaisy = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,6 +87,7 @@ export const ModalDaisy = () => {
                 Full Name
               </label>
               <input
+                required
                 name="username"
                 type="text"
                 placeholder="John Doe"
@@ -97,6 +100,7 @@ export const ModalDaisy = () => {
                 Email
               </label>
               <input
+                required
                 name="email"
                 type="email"
                 placeholder="your-email@gmail.com"
@@ -110,6 +114,7 @@ export const ModalDaisy = () => {
                 Phone Number
               </label>
               <input
+                required
                 name="phone"
                 type="tel"
                 placeholder="+1 (555) 000-0000"
@@ -119,8 +124,9 @@ export const ModalDaisy = () => {
 
             {/* Seating Capacity Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
-                Couch Size (Capacity)
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Tell what would you like to clean. E.g: Couch Size (Capacity),
+                or size of the Rug, Mattress.
               </label>
               <input
                 name="couch"
