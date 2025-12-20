@@ -23,6 +23,7 @@ export function VideoComponent({
       autoPlay={autoPlay}
       loop={loop}
       muted={muted}
+      className="rounded-2xl"
     >
       <source src={source} type="video/mp4" />
       <track

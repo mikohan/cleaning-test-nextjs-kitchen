@@ -63,7 +63,7 @@ export const ModalVideo = () => {
             Watch Video about my cleanig process
           </h2>
 
-          <div className="space-y-5 m-h-[1280px] w-auto">
+          <div className="space-y-5 h-full w-auto">
             {/* Name Field */}
             <div>
               <VideoComponent source="/videos/old_thanks_christmas.mp4" />
