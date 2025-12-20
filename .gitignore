@@ -2,7 +2,7 @@
 
 #my custom files
 #video
-*.mp4
+#*.mp4
 
 # dependencies
 /node_modules
