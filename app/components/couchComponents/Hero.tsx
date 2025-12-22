@@ -1,8 +1,5 @@
 import { GoogleStars } from "../GoogleStars";
 import { AvatarGroup } from "../AvatarGroup";
-import VideoImage from "@/public/images/couch/hero.jpg";
-import VideoIcon from "@/public/images/couch/video-icon.svg";
-import Image from "next/image";
 import { ModalDaisy } from "../ModalDaisy";
 import { ModalVideo } from "@/app/components/ModalVideo";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
