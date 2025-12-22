@@ -41,6 +41,7 @@ export const WhyUs = () => {
                   src={ShieldIcon}
                   height={24}
                   width={24}
+                  placeholder="blur"
                 />
                 <h3 className="font-blauerMedium text-xl text-couchDarkBlue font-gradient">
                   Safe for Kids & Pets
@@ -73,8 +74,9 @@ export const WhyUs = () => {
             <Image
               src={ReviewsMeImage}
               alt="Reviews"
-              width={1380}
-              height={932}
+              width={690}
+              height={466}
+              placeholder="blur"
               className="object-cover"
             />
           </div>
