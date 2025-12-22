@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ModalDaisy } from "../ModalDaisy";
 import { ModalVideo } from "@/app/components/ModalVideo";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { VideoComponent } from "../VideoComponent";
 
 function Hero() {
   return (
@@ -47,15 +48,21 @@ function Hero() {
           </div>
           {/* Image container wrapper */}
           <div className="mt-16 md:mt-0 md:flex-1 flex justify-center">
-            <div className="relative aspect-4/6 w-full md:w-[80%] ">
-              <Image
+            <div className="relative aspect-1080/1350 w-full md:w-[80%] ">
+              <VideoComponent
+                source="/videos/LandPage1.mp4"
+                width="1080"
+                heigh="1350"
+              />
+
+              {/* <Image
                 fetchPriority="high"
                 src={VideoImage}
                 priority
                 alt="some"
                 className="rounded-4xl"
                 fill
-              />
+              /> */}
             </div>
           </div>
         </div>
