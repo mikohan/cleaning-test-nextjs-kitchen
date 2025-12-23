@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "@/app/utils/lenis";
 import "lenis/dist/lenis.css";
+import FacebookPixel from "./components/FacebookPixel";
 
 const latoSans = Geist({
   variable: "--font-lato-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
           className={`${latoSans.variable} ${latoMono.variable} antialiased`}
         >
           {children}
+          <FacebookPixel />
         </body>
       </ReactLenis>
     </html>
