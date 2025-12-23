@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "@/app/utils/lenis";
@@ -27,13 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} /> */}
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_TAG_MANAGER_ID as string}
+      />
       <ReactLenis root>
         <body
           className={`${latoSans.variable} ${latoMono.variable} antialiased`}
         >
           {children}
-          {/* <FacebookPixel /> */}
         </body>
       </ReactLenis>
     </html>
