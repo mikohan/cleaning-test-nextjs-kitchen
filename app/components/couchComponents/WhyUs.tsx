@@ -78,7 +78,7 @@ export const WhyUs = () => {
               width={690}
               height={466}
               className="object-cover"
-              sizes="(max-width: 768px) 350px, (max-width: 1200px) 768px, 25vw"
+              sizes="(min-width: 780px) 691px, (min-width: 680px) 593px, calc(94.72vw - 32px)"
             />
           </div>
         </div>

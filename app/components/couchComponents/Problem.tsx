@@ -23,6 +23,7 @@ export const Problem = () => (
                   src={obj.img}
                   className="w-full h-auto object-cover rounded-2xl"
                   fill
+                  sizes="(min-width: 1540px) 453px, (min-width: 780px) 375px, (min-width: 680px) 592px, (min-width: 460px) 90vw, calc(10.71vw + 345px)"
                 />
               </div>
               <p className="text-couchShadow text-center mb-16">{obj.text}</p>
