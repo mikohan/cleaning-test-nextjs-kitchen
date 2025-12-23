@@ -7,6 +7,7 @@ export const PriceCard = ({ img, category, items }: IPrice) => (
     <div className="h-70 w-auto relative">
       <Image
         priority
+        fetchPriority="high"
         className="object-cover rounded-4xl"
         fill
         alt={category}

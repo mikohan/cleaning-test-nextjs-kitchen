@@ -72,6 +72,8 @@ export const WhyUs = () => {
           </div>
           <div className="mt-16 md:mt-32 max-w-5xl">
             <Image
+              priority
+              fetchPriority="high"
               src={ReviewsMeImage}
               alt="Reviews"
               width={690}
