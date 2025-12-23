@@ -33,10 +33,10 @@ function Hero() {
                   Steam Cleaning in LA
                 </h1>
               </RoughNotationGroup>
-              <h3 className="mx-8 text-lg md:text-2xl font-blauerRegular text-couchDarkBlue/70 tracking-tight leading-4.5 mt-4 md:mt-8">
+              <h2 className="mx-8 text-lg md:text-2xl font-blauerRegular text-couchDarkBlue/70 tracking-tight leading-4.5 mt-4 md:mt-8">
                 We restore freshness, remove odors, and save you furniture time
                 & money. Professional, safe, fast.
-              </h3>
+              </h2>
               <div className="w-full md:flex md:gap-4 mt-16 md:mt-40 md:items-center">
                 <ModalDaisy />
                 <ModalVideo />
