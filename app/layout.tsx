@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "@/app/utils/lenis";
 import "lenis/dist/lenis.css";
-//import FacebookPixel from "./components/FacebookPixel";
+import { Partytown } from "@qwik.dev/partytown/react";
+import { GoogleTagManager } from "@/app/components/GoogleTagManager";
 
 const latoSans = Geist({
   variable: "--font-lato-sans",
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Kitchen Test Landing",
   description: "The best cleaning services in Los Angeles",
 };
+const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "";
 
 export default function RootLayout({
   children,
@@ -27,16 +28,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager
-        gtmId={process.env.NEXT_PUBLIC_TAG_MANAGER_ID as string}
-      />
-      <ReactLenis root>
-        <body
-          className={`${latoSans.variable} ${latoMono.variable} antialiased`}
-        >
+      <head>
+        {/* Optional: Preconnect for better performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <Partytown forward={["dataLayer.push"]} />
+      </head>
+      <body>
+        <ReactLenis>
+          {/* GTM noscript fallback */}
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+
+          {/* Load GTM */}
+          {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
+
           {children}
-        </body>
-      </ReactLenis>
+        </ReactLenis>
+      </body>
     </html>
   );
 }

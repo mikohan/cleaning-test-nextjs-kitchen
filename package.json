@@ -7,12 +7,14 @@
     "build": "next build",
     "start": "next start -p 3011",
     "lint": "eslint",
-    "email": "email dev -p 4000"
+    "email": "email dev -p 4000",
+    "partytown": "partytown copylib public/~partytown"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@next/third-parties": "^16.1.1",
+    "@qwik.dev/partytown": "^0.11.2",
     "@react-email/components": "1.0.1",
     "@react-email/render": "^2.0.0",
     "@react-email/tailwind": "^2.0.1",
