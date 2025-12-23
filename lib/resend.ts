@@ -12,7 +12,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (prevState: FormState, formData: FormData) => {
   await new Promise((resolve) => {
-    setTimeout(resolve, 2000);
+    setTimeout(resolve, 500);
   });
   const email = formData.get("email") as string;
   const username = formData.get("username") as string;
@@ -30,7 +30,7 @@ export const sendEmail = async (prevState: FormState, formData: FormData) => {
       console.error(error);
       return { success: false, message: error.message };
     }
-    console.log(data);
+    // console.log(data);
     return { success: true, message: "Email sent successfully!" };
   } catch (error) {
     console.error(error);

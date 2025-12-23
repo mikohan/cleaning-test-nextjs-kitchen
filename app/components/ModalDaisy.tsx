@@ -19,6 +19,8 @@ export const ModalDaisy = () => {
     toast.success("Email was sent successfully! I'll contact you ASAP.", {
       position: "top-left",
       autoClose: 5000,
+      closeOnClick: true,
+      containerId: "oneContainer",
     });
 
   const [state, action, isLoading] = useActionState<FormState, FormData>(
@@ -172,7 +174,11 @@ export const ModalDaisy = () => {
           </form>
         </div>
       </dialog>
-      <ToastContainer toastClassName="bg-green-400 p-4 rounded-md" />
+      <ToastContainer
+        containerId="oneContainer"
+        limit={1}
+        toastClassName="bg-green-400 p-4 rounded-md"
+      />
     </>
   );
 };

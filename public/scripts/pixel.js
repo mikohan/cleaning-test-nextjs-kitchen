@@ -2,6 +2,7 @@ const PIXEL_ID = document.currentScript.getAttribute("data-pixel-id");
 
 function initializeFacebookPixel(f, b, e, v, n, t, s) {
   if (f.fbq) return;
+
   n = f.fbq = function () {
     n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
   };
