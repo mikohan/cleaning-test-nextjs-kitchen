@@ -16,6 +16,7 @@ export const Team = () => (
             alt="our team"
             src={MeVasyaImage}
             className="w-full h-auto object-cover rounded-2xl"
+            sizes="(max-width: 768px) 350px, (max-width: 1200px) 768px, 25vw"
           />
         </div>
       </div>

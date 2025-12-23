@@ -12,6 +12,7 @@ export const PriceCard = ({ img, category, items }: IPrice) => (
         fill
         alt={category}
         src={img}
+        sizes="(max-width: 768px) 350px, (max-width: 1200px) 768px, 25vw"
       />
       <div className="absolute bottom-8 left-8  py-2 px-4  rounded-3xl bg-white/40">
         <p className="font-blauerRegular font-gradient text-xl md:text-2xl">
