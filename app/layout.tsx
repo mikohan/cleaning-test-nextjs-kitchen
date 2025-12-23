@@ -33,7 +33,7 @@ export default function RootLayout({
           className={`${latoSans.variable} ${latoMono.variable} antialiased`}
         >
           {children}
-          <FacebookPixel />
+          {/* <FacebookPixel /> */}
         </body>
       </ReactLenis>
     </html>
