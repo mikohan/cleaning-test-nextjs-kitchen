@@ -44,7 +44,8 @@ body,
   --color-couchYellow: #f1a501;
   --color-couchBlue: #006fee;
   --color-couchLightBlue: #e6f1fe;
-  --color-couchShadow: #7c7c7c;
+  /* --color-couchShadow: #7c7c7c; */
+  --color-couchShadow: #4b5563;
   --font-sans: var(--font-lato-sans);
   --font-mono: var(--font-lato-mono);
   --font-display: "Lato", sans-serif;

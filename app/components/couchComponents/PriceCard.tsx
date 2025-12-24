@@ -29,7 +29,7 @@ export const PriceCard = ({ img, category, items }: IPrice) => (
           {item.item}
         </div>
         <div className="flex gap-4 items-center">
-          <div className="text-2xl text-[#47CBA7]">
+          <div className="text-2xl text-teal-800">
             <span>$</span>
             {item.priceAfter}
           </div>

@@ -46,8 +46,6 @@ export default function RootLayout({
             return url;
           }}
         />
-
-        {/* 2. GTM Script - Manual Hijack */}
         <script
           id="gtm"
           type="text/partytown"

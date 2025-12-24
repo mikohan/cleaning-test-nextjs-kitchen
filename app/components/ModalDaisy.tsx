@@ -157,6 +157,7 @@ export const ModalDaisy = () => {
                 type="button"
                 onClick={handleClose}
                 className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition cursor-pointer"
+                aria-label="Cancel"
               >
                 Cancel
               </button>

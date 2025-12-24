@@ -41,7 +41,10 @@ function HeroMaleviz({ src }: ImgSrc) {
               hours back this year, guaranteed.
             </h2>
             <div className="w-full  mt-8">
-              <button className="btn btn-primary rounded-3xl bg-blue-600 border-0 min-w-[262px]">
+              <button
+                className="btn btn-primary rounded-3xl bg-blue-600 border-0 min-w-[262px]"
+                aria-label="Book now!"
+              >
                 Book now!
               </button>
             </div>
@@ -56,7 +59,10 @@ function HeroMaleviz({ src }: ImgSrc) {
               className="object-cover"
               fill
             />
-            <button className="border-2 bg-white/50 border-amber-500 rounded-4xl px-4 py-2 font-semibold absolute bottom-[5%]  left-[50%] md:-left-[5%]">
+            <button
+              className="border-2 bg-white/50 border-amber-500 rounded-4xl px-4 py-2 font-semibold absolute bottom-[5%]  left-[50%] md:-left-[5%]"
+              aria-label="1000+ Jobs done!"
+            >
               1000+ Jobs done
             </button>
           </div>

@@ -20,7 +20,7 @@ export default function AboutPage() {
     });
   };
   return (
-    <div className="relative font-blauerRegular text-couchDarkBlue">
+    <main className="relative font-blauerRegular text-couchDarkBlue">
       <Header />
       <Hero />
       <LogoTicker />
@@ -32,6 +32,6 @@ export default function AboutPage() {
       <Team />
       <CallToAction className="bg-linear-to-t from-white to-couchLightBlue mb-16" />
       <Footer handleClick={handleClick} />
-    </div>
+    </main>
   );
 }
