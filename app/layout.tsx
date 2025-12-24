@@ -29,18 +29,21 @@ export default function RootLayout({
       </head>
       <ReactLenis root>
         <body>
-          {/* GTM noscript fallback */}
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            />
-          </noscript>
+          {/* Only render GTM if the ID exists to prevent mismatch logic */}
+          {GTM_ID && (
+            <>
+              <noscript>
+                <iframe
+                  src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+                  height="0"
+                  width="0"
+                  style={{ display: "none", visibility: "hidden" }}
+                />
+              </noscript>
+              <GoogleTagManager gtmId={GTM_ID} />
+            </>
+          )}
           {children}
-          {/* Load GTM */}
-          {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
         </body>
       </ReactLenis>
     </html>

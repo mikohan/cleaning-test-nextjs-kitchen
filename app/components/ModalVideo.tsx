@@ -51,7 +51,7 @@ export const ModalVideo = () => {
               height={24}
               width={24}
               alt="button"
-              className="block ml-1"
+              className="block ml-1 w-full h-auto"
             />
           </div>
           <div className="block">Watch Video</div>
