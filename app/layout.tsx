@@ -60,6 +60,12 @@ export default function RootLayout({
       </head>
       <ReactLenis root>
         <body>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-couchBlue text-white p-4 z-50"
+          >
+            Skip to content
+          </a>
           {GTM_ID && (
             <>
               <noscript>

@@ -13,7 +13,7 @@ export const Footer = ({ handleClick }: props) => {
   return (
     <footer>
       <section className="bg-couchDarkBlue relative">
-        <div className="absolute bottom-16 right-4 w-full pr-4 h-auto flex justify-end animate-pulse">
+        <div className="absolute bottom-64 right-4 w-full pr-4 h-auto flex justify-end animate-pulse">
           <button
             className="h-24 w-24 aspect-square rounded-full bg-couchBlue/25 cursor-pointer border-4 border-couchBlue/30 flex justify-center items-center group hover:scale-105   transform duration-300 ease-in-out"
             onClick={handleClick}
