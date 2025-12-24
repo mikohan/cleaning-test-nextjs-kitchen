@@ -1,3 +1,5 @@
+import Image from "next/image";
+import HeroImage from "@/public/images/couch/hero.jpg";
 type props = {
   source: string;
   autoPlay?: boolean;
@@ -19,7 +21,7 @@ export function VideoComponent({
       width={width}
       height={heigh}
       controls
-      preload="none"
+      preload="auto"
       autoPlay={autoPlay}
       loop={loop}
       muted={muted}
@@ -27,7 +29,7 @@ export function VideoComponent({
     >
       <source src={source} type="video/mp4" />
       <track
-        src="/path/to/captions.vtt"
+        // src="/path/to/captions.vtt"
         kind="subtitles"
         srcLang="en"
         label="English"

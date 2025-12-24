@@ -1,9 +1,18 @@
+import dynamic from "next/dynamic";
 import { GoogleStars } from "../GoogleStars";
 import { AvatarGroup } from "../AvatarGroup";
 import { ModalDaisy } from "../ModalDaisy";
 import { ModalVideo } from "@/app/components/ModalVideo";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import { VideoComponent } from "../VideoComponent";
+// import { VideoComponent } from "../VideoComponent";
+// Load the video component without SSR to save main thread time
+const VideoComponent = dynamic(
+  () =>
+    import("@/app/components/VideoComponent").then((mod) => mod.VideoComponent),
+  {
+    ssr: false,
+  }
+);
 
 function Hero() {
   return (

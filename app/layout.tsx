@@ -57,6 +57,12 @@ export default function RootLayout({
           })(window,document,'script','dataLayer', 'GTM-KSG58TR5')`,
           }}
         />
+        <link
+          rel="preload"
+          href="/videos/LandPage1.mp4"
+          as="video"
+          type="video/mp4"
+        />
       </head>
       <ReactLenis root>
         <body>
