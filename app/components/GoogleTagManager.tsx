@@ -13,7 +13,7 @@ export function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
       {/* Initialize dataLayer BEFORE GTM script */}
       <Script
         id="gtm-base"
-        strategy="afterInteractive"
+        strategy="worker"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -26,7 +26,7 @@ export function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
       <Script
         id="gtm-script"
         src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
-        strategy="afterInteractive"
+        strategy="worker"
       />
     </>
   );

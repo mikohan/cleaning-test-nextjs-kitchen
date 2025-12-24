@@ -13,6 +13,12 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    extends: "next/core-web-vitals",
+    rules: {
+      "@next/next/no-script-component": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import ReactLenis from "lenis/react";
 import "lenis/dist/lenis.css";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description: "The best cleaning services in Los Angeles",
 };
 
-const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "";
+const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "GTM-KSG58TR5";
 
 export default function RootLayout({
   children,
@@ -21,25 +22,35 @@ export default function RootLayout({
     // suppressHydrationWarning
     <html lang="en">
       <head>
-        {/* Optional: Preconnect for better performance */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <Partytown forward={["dataLayer.push"]} />
+        {/* 1. Partytown Configuration */}
+        <Partytown debug={true} forward={["dataLayer.push", "fbq"]} />
+
+        {/* 2. GTM Script - Manual Hijack */}
+        <script
+          id="gtm"
+          type="text/partytown"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer', 'GTM-KSG58TR5')`,
+          }}
+        />
       </head>
       <ReactLenis root>
         <body>
-          {/* Only render GTM if the ID exists to prevent mismatch logic */}
           {GTM_ID && (
             <>
               <noscript>
                 <iframe
-                  src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+                  src={`https://www.googletagmanager.com/ns.html?id=GTM-KSG58TR5`}
                   height="0"
                   width="0"
                   style={{ display: "none", visibility: "hidden" }}
                 />
               </noscript>
-              <GoogleTagManager gtmId={GTM_ID} />
+              {/* <GoogleTagManager gtmId={GTM_ID} /> */}
             </>
           )}
           {children}

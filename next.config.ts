@@ -19,6 +19,15 @@ const nextConfig: NextConfig = {
   // 'swcMinify' is now default, so we just remove the line
   experimental: {
     optimizeCss: true,
+    // nextScriptWorkers: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/proxy/gtm/:path*",
+        destination: "https://www.googletagmanager.com/:path*",
+      },
+    ];
   },
 };
 export default nextConfig;
