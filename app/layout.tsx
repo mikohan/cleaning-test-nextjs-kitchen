@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ReactLenis } from "@/app/utils/lenis";
-import "lenis/dist/lenis.css";
+// import { ReactLenis } from "@/app/utils/lenis";
+// import "lenis/dist/lenis.css";
 import { Partytown } from "@qwik.dev/partytown/react";
 import { GoogleTagManager } from "@/app/components/GoogleTagManager";
+import ReactLenis from "lenis/react";
 
 export const metadata: Metadata = {
   title: "Kitchen Test Landing",
   description: "The best cleaning services in Los Angeles",
 };
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "";
+console.log(GTM_ID);
 
 export default function RootLayout({
   children,
@@ -17,6 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // suppressHydrationWarning
     <html lang="en">
       <head>
         {/* Optional: Preconnect for better performance */}
@@ -24,8 +27,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <Partytown forward={["dataLayer.push"]} />
       </head>
-      <body>
-        <ReactLenis>
+      <ReactLenis root>
+        <body>
           {/* GTM noscript fallback */}
           <noscript>
             <iframe
@@ -35,13 +38,11 @@ export default function RootLayout({
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
-
+          {children}
           {/* Load GTM */}
           {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
-
-          {children}
-        </ReactLenis>
-      </body>
+        </body>
+      </ReactLenis>
     </html>
   );
 }
