@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "@/app/utils/lenis";
 import "lenis/dist/lenis.css";
 import { Partytown } from "@qwik.dev/partytown/react";
 import { GoogleTagManager } from "@/app/components/GoogleTagManager";
-
-const latoSans = Geist({
-  variable: "--font-lato-sans",
-  subsets: ["latin"],
-});
-const latoMono = Geist_Mono({
-  variable: "--font-lato-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Kitchen Test Landing",
