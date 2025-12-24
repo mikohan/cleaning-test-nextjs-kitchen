@@ -48,12 +48,14 @@ export interface IItem {
 }
 export interface IPrice {
   img: StaticImageData;
+  url: string;
   category: string;
   items: IItem[];
 }
 export const prices: IPrice[] = [
   {
     img: SmalCouchImage,
+    url: "https://ik.imagekit.io/angara/Couch/prices/sofa.png",
     category: "Sofas",
     items: [
       {
@@ -70,6 +72,8 @@ export const prices: IPrice[] = [
   },
   {
     img: SmalLShapedImage,
+
+    url: "https://ik.imagekit.io/angara/Couch/prices/smallLShaped.png",
     category: "L-Shaped Couch",
     items: [
       {
@@ -86,6 +90,8 @@ export const prices: IPrice[] = [
   },
   {
     img: LargeSectionalImage,
+
+    url: "https://ik.imagekit.io/angara/Couch/prices/largeSecional.png",
     category: "Large Sectional",
     items: [
       {
@@ -102,6 +108,8 @@ export const prices: IPrice[] = [
   },
   {
     img: ArmChairImage,
+    url: "https://ik.imagekit.io/angara/Couch/prices/armchair.png",
+
     category: "Chairs",
     items: [
       {
@@ -118,6 +126,7 @@ export const prices: IPrice[] = [
   },
   {
     img: MattressImage,
+    url: "https://ik.imagekit.io/angara/Couch/prices/mattress.png",
     category: "Mattresses",
     items: [
       {
@@ -134,6 +143,8 @@ export const prices: IPrice[] = [
   },
   {
     img: BedImage,
+
+    url: "https://ik.imagekit.io/angara/Couch/prices/bed.png",
     category: "Bed",
     items: [
       {
@@ -150,6 +161,8 @@ export const prices: IPrice[] = [
   },
   {
     img: CarpetImage,
+
+    url: "https://ik.imagekit.io/angara/Couch/prices/carpet.png",
     category: "Carpets",
     items: [
       {
@@ -166,6 +179,8 @@ export const prices: IPrice[] = [
   },
   {
     img: RugImage,
+
+    url: "https://ik.imagekit.io/angara/Couch/prices/rug.png",
     category: "Area Rugs",
     items: [
       {
@@ -186,14 +201,17 @@ export const problems = [
   {
     text: "Got a dirty, smelly couch? We make it look new—saving you money and giving it years more life.",
     img: ProblemImage1,
+    url: "https://ik.imagekit.io/angara/Couch/before-after-crop.jpg",
   },
   {
     text: "Spills and stains on your couch? We clean it right—removing mess and smells fast, so it lasts longer.",
     img: ProblemImage2,
+    url: "https://ik.imagekit.io/angara/Couch/problem1.jpg",
   },
   {
     text: "Pet mess on the couch? We remove stains and odors fast—restoring freshness and protecting it for years.",
     img: ProblemImage3,
+    url: "https://ik.imagekit.io/angara/Couch/problem3.jpg",
   },
 ];
 

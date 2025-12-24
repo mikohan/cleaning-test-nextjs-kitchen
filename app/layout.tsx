@@ -1,15 +1,16 @@
+import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
-// import { ReactLenis } from "@/app/utils/lenis";
-// import "lenis/dist/lenis.css";
+import ReactLenis from "lenis/react";
+import "lenis/dist/lenis.css";
 import { Partytown } from "@qwik.dev/partytown/react";
 import { GoogleTagManager } from "@/app/components/GoogleTagManager";
-import ReactLenis from "lenis/react";
 
 export const metadata: Metadata = {
-  title: "Kitchen Test Landing",
+  title: "Couch and Upholstery Professional cleaning in LA",
   description: "The best cleaning services in Los Angeles",
 };
+
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "";
 
 export default function RootLayout({

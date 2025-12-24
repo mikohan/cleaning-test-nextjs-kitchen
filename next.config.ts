@@ -1,17 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
-      new URL("https://img.daisyui.com/**"),
-      new URL("https://ik.imagekit.io/angara/**"),
+      {
+        protocol: "https",
+        hostname: "img.daisyui.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+        pathname: "/angara/**",
+      },
     ],
   },
+  // 'swcMinify' is now default, so we just remove the line
   experimental: {
-    optimizeCss: true, // Enable CSS optimization
+    optimizeCss: true,
   },
 };
-
 export default nextConfig;

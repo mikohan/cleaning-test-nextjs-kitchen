@@ -20,7 +20,8 @@ export const Problem = () => (
               <div className="relative h-60 w-full mb-4">
                 <Image
                   alt={`Image of problem we solve-${i}`}
-                  src={obj.img}
+                  // src={obj.img}
+                  src={obj.url}
                   className="w-full h-auto object-cover rounded-2xl"
                   fill
                   priority={i === 0} // High priority for the first item

@@ -77,7 +77,7 @@ export const WhyUs = () => {
               alt="Reviews"
               width={690}
               height={466}
-              sizes="(min-width: 1280px) 690px, (min-width: 460px) 364px, 690px"
+              sizes="(min-width: 1280px) 690px, (min-width: 460px) 90vw, 690px"
             />
           </div>
         </div>
