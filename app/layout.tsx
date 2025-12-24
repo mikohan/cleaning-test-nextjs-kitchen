@@ -23,7 +23,29 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* 1. Partytown Configuration */}
-        <Partytown debug={true} forward={["dataLayer.push", "fbq"]} />
+        {/* <Partytown debug={true} forward={["dataLayer.push", "fbq"]} /> */}
+        <Partytown
+          debug={false} // Turn off debug for production performance
+          forward={["dataLayer.push", "fbq"]}
+          resolveUrl={(url) => {
+            // In production, self.location.origin is 'https://upholstery.angaracleaning.com'
+            const origin = self.location.origin;
+
+            if (url.hostname === "connect.facebook.net") {
+              // Prevent double proxying if the worker re-processes the URL
+              if (url.pathname.startsWith("/proxy/fb")) return url;
+
+              return new URL(`/proxy/fb${url.pathname}${url.search}`, origin);
+            }
+
+            if (url.hostname === "www.googletagmanager.com") {
+              if (url.pathname.startsWith("/proxy/gtm")) return url;
+              return new URL(`/proxy/gtm${url.pathname}${url.search}`, origin);
+            }
+
+            return url;
+          }}
+        />
 
         {/* 2. GTM Script - Manual Hijack */}
         <script

@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
         source: "/proxy/gtm/:path*",
         destination: "https://www.googletagmanager.com/:path*",
       },
+      {
+        source: "/proxy/fb/:path*",
+        destination: "https://connect.facebook.net/:path*",
+      },
     ];
   },
 };
