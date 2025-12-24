@@ -23,7 +23,9 @@ export const Problem = () => (
                   src={obj.img}
                   className="w-full h-auto object-cover rounded-2xl"
                   fill
-                  sizes="(min-width: 1540px) 453px, (min-width: 780px) 376px, (min-width: 680px) 592px, (min-width: 460px) 90vw, calc(10vw + 348px)"
+                  priority={i === 0} // High priority for the first item
+                  loading={i === 0 ? "eager" : "lazy"}
+                  sizes="(min-width: 1280px) 300px, (min-width: 460px) 90vw, 300px"
                 />
               </div>
               <p className="text-couchShadow text-center mb-16">{obj.text}</p>

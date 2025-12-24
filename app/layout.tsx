@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   description: "The best cleaning services in Los Angeles",
 };
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "";
-console.log(GTM_ID);
 
 export default function RootLayout({
   children,

@@ -3,7 +3,7 @@ import DoneIcon from "@/public/images/couch/done.svg";
 import ShieldIcon from "@/public/images/couch/sheild.svg";
 import WalletdIcon from "@/public/images/couch/wallet.svg";
 import { Tag } from "../SmallComponents/Tag";
-import ReviewsMeImage from "@/public/images/couch/me-rewiew-cropped.png";
+import ReviewsMeImage from "@/public/images/couch/me-rewiew-cropped-small.png";
 
 export const WhyUs = () => {
   return (
@@ -77,8 +77,7 @@ export const WhyUs = () => {
               alt="Reviews"
               width={690}
               height={466}
-              className="object-cover"
-              sizes="(min-width: 780px) 691px, (min-width: 680px) 593px, calc(94.72vw - 32px)"
+              sizes="(min-width: 1280px) 690px, (min-width: 460px) 364px, 690px"
             />
           </div>
         </div>
