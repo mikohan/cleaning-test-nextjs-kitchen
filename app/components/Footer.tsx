@@ -23,12 +23,12 @@ export const Footer = ({ handleClick }: props) => {
           </button>
         </div>
         <div className="container px-6 py-4 mx-auto">
+          <Image src={Logo} alt="bottom logo" width={400} height={100} />
           <div className="flex flex-col items-center gap-4">
-            <Image src={Logo} alt="bottom logo" />
-            <p className="text-couchLightBlue">
+            <p className="text-couchLightBlue text-xl md:text-2xl">
               <a href="tel:2135987763">(213) 598-77-63</a>
             </p>
-            <div className="flex gap-8 justify-center">
+            <div className="flex gap-8 md:gap-16 justify-center">
               <a href="https://www.instagram.com/angara_steamers/">
                 <Image
                   src={InstagramIcon}
