@@ -19,7 +19,7 @@ function Hero() {
     <section className="pt-8 md:pt-16 pb-16 bg-gradient">
       <div className="container max-w-7xl mx-auto px-6">
         {/* Wrapper for text and image */}
-        <div className="md:flex justify-center ">
+        <div className="md:flex justify-center">
           {/* Text and buttons section */}
           <div className="text-center md:flex-1">
             <div className="inline-flex md:flex-col items-center md:gap-2 ">
@@ -53,7 +53,7 @@ function Hero() {
             </div>
           </div>
           {/* Image container wrapper */}
-          <div className="mt-16 md:mt-0 md:flex-1 flex justify-center">
+          <div className="mt-16 md:mt-0 md:flex-1 flex justify-center items-center">
             <div className="relative aspect-1080/1350 w-full md:w-[80%] ">
               <VideoComponent
                 source="/videos/LandPage1.mp4"
