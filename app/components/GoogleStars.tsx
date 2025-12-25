@@ -23,7 +23,7 @@ function GoogleStars({ rating, text, starsCount, inline = true }: GoogleProps) {
               width={20}
               src={Star}
               alt="Review stars"
-              className="w-full h-auto"
+              // className="w-full h-auto"
             />
           </div>
         ))}
