@@ -1,5 +1,6 @@
 import Logo from "@/public/images/couch/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -27,9 +28,9 @@ function Header() {
             </p>
           </div>
           <nav className="hidden md:flex gap-6 items-center font-blauerSemibold text-couchDarkBlue/60">
-            <a href="#">Home</a>
-            <a href="#">Prices</a>
-            <a href="#">Contacts</a>
+            <Link href="#home">Home</Link>
+            <Link href="#prices">Prices</Link>
+            <Link href="#reviews">Reviews</Link>
           </nav>
           <div>
             <p className="font-blauerMedium text-couchShadow">

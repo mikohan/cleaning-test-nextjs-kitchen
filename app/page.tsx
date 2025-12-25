@@ -26,9 +26,13 @@ export default function AboutPage() {
       <LogoTicker />
       <Problem />
       <WhyUs />
-      <Prices />
+      <section id="prices">
+        <Prices />
+      </section>
       <CallToAction className="py-16" />
-      <Testimonials />
+      <section id="reviews">
+        <Testimonials />
+      </section>
       <Team />
       <CallToAction className="bg-linear-to-t from-white to-couchLightBlue mb-16" />
       <Footer handleClick={handleClick} />

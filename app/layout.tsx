@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     // suppressHydrationWarning
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         {/* 1. Partytown Configuration */}
         {/* <Partytown debug={true} forward={["dataLayer.push", "fbq"]} /> */}
