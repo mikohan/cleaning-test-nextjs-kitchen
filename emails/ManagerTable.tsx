@@ -17,9 +17,16 @@ interface Props {
   email?: string;
   phone?: string;
   couch?: string;
+  orderTime?: string;
 }
 
-export const ManagerTable = ({ username, email, phone, couch }: Props) => {
+export default function ManagerTable({
+  username,
+  email,
+  phone,
+  couch,
+  orderTime,
+}: Props) {
   const previewText = "Your recent order summary";
 
   return (
@@ -29,19 +36,22 @@ export const ManagerTable = ({ username, email, phone, couch }: Props) => {
       <Body style={main}>
         <Container style={container}>
           <Section>
-            <Text style={heading}>Order Summary</Text>
+            <Text style={heading}>Lead Summary</Text>
           </Section>
 
           {/* Table Header Row */}
           <Section style={sectionBorder}>
             <Row>
-              <Column style={headerCell}>{username}</Column>
-              <Column style={headerCell}>{email}</Column>
+              <Column style={headerCell}>Name</Column>
+              <Column style={headerCell}>Email</Column>
               <Column style={headerCell} align="right">
-                {phone}
+                Phone
               </Column>
               <Column style={headerCell} align="right">
-                {couch}
+                Aditional info
+              </Column>
+              <Column style={headerCell} align="right">
+                Sending Time
               </Column>
             </Row>
           </Section>
@@ -49,29 +59,16 @@ export const ManagerTable = ({ username, email, phone, couch }: Props) => {
           {/* Table Data Rows */}
           <Section>
             <Row>
-              <Column style={dataCell}>React Email T-Shirt</Column>
-              <Column style={dataCell}>1</Column>
+              <Column style={dataCell}>{username || "Nobody"}</Column>
+              <Column style={dataCell}>{email || "Empty Email"}</Column>
               <Column style={dataCell} align="right">
-                $25.00
+                {phone || "Empty"}
               </Column>
-            </Row>
-            <Row>
-              <Column style={dataCell}>Sticker Pack</Column>
-              <Column style={dataCell}>2</Column>
               <Column style={dataCell} align="right">
-                $5.00
+                {couch || "Couch empty"}
               </Column>
-            </Row>
-          </Section>
-
-          {/* Total Row */}
-          <Section style={sectionBorderTop}>
-            <Row>
-              <Column colSpan={2} style={totalCell}>
-                Total:
-              </Column>
-              <Column style={{ ...totalCell, ...totalAmount }} align="right">
-                $35.00
+              <Column style={dataCell} align="right">
+                {orderTime || "2025-04-22"}
               </Column>
             </Row>
           </Section>
@@ -79,7 +76,7 @@ export const ManagerTable = ({ username, email, phone, couch }: Props) => {
       </Body>
     </Html>
   );
-};
+}
 
 // Basic inline styles (React Email handles inlining these into the final HTML)
 const main = {

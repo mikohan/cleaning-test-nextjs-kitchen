@@ -1,5 +1,5 @@
-import { ManagerTable } from "./../emails/ManagerTable";
-("use server");
+"use server";
+import ManagerTable from "./../emails/ManagerTable";
 import { Resend } from "resend";
 import Manager from "@/emails/Manager";
 
@@ -19,15 +19,18 @@ export const sendEmail = async (prevState: FormState, formData: FormData) => {
   const username = formData.get("username") as string;
   const phone = formData.get("phone") as string;
   const couch = formData.get("couch") as string;
-  console.log("First output to console:", email, username, phone);
   // const fromEmail = "Acme <onboarding@resend.dev>"
   const fromEmail = "Angara Steamers <info@angaracleaning.com>";
+  const nowDate = new Date();
+  const orderTime = nowDate.toLocaleString();
+  console.log(orderTime);
+
   try {
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: [process.env.COMPANY_EMAIL || "angaralabllc@gmail.com"],
       subject: "Hello world",
-      react: Manager({ username, phone, email, couch }),
+      react: ManagerTable({ username, phone, email, couch, orderTime }),
     });
     if (error) {
       console.error(error);
