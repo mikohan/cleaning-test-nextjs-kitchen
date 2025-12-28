@@ -1,4 +1,5 @@
-"use server";
+import { ManagerTable } from "./../emails/ManagerTable";
+("use server");
 import { Resend } from "resend";
 import Manager from "@/emails/Manager";
 
@@ -19,9 +20,11 @@ export const sendEmail = async (prevState: FormState, formData: FormData) => {
   const phone = formData.get("phone") as string;
   const couch = formData.get("couch") as string;
   console.log("First output to console:", email, username, phone);
+  // const fromEmail = "Acme <onboarding@resend.dev>"
+  const fromEmail = "Angara Steamers <info@angaracleaning.com>";
   try {
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: fromEmail,
       to: [process.env.COMPANY_EMAIL || "angaralabllc@gmail.com"],
       subject: "Hello world",
       react: Manager({ username, phone, email, couch }),
