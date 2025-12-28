@@ -29,7 +29,7 @@ export const sendEmail = async (prevState: FormState, formData: FormData) => {
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: [process.env.COMPANY_EMAIL || "angaralabllc@gmail.com"],
-      subject: "Hello world",
+      subject: "Angara Steamers New Lead",
       react: ManagerTable({ username, phone, email, couch, orderTime }),
     });
     if (error) {
