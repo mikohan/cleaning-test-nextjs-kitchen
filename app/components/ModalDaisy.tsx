@@ -27,7 +27,8 @@ export const ModalDaisy = () => {
   const [state, action, isLoading] = useActionState<FormState, FormData>(
     async (prevState: FormState, formData: FormData) => {
       // 1. Call the actual server action
-      const result = await sendEmail(prevState, formData);
+      const result = await sendEmail(prevState, formData, "manager");
+      const resultCustomer = await sendEmail(prevState, formData, "customer");
 
       // 2. Execute your callback logic based on the result
       if (result.success) {
