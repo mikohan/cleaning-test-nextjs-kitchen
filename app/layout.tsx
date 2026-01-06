@@ -4,13 +4,12 @@ import "./globals.css";
 import ReactLenis from "lenis/react";
 import "lenis/dist/lenis.css";
 import { Partytown } from "@qwik.dev/partytown/react";
-import { GoogleTagManager } from "@/app/components/GoogleTagManager";
 
 export const metadata: Metadata = {
   title: "Couch and Upholstery Professional cleaning in LA",
   description: "The best cleaning services in Los Angeles",
 };
-
+console.log(jsonLd);
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "GTM-KSG58TR5";
 
 export default function RootLayout({
@@ -61,15 +60,9 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/>/g, "\\u003c"),
+            __html: JSON.stringify(jsonLd),
           }}
         ></script>
-        <link
-          rel="preload"
-          href="/videos/LandPage1.mp4"
-          as="video"
-          type="video/mp4"
-        />
       </head>
       <ReactLenis root>
         <body>
