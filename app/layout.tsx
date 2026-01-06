@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { jsonLd } from "./data2";
 import "./globals.css";
 import ReactLenis from "lenis/react";
 import "lenis/dist/lenis.css";
@@ -57,6 +57,13 @@ export default function RootLayout({
           })(window,document,'script','dataLayer', 'GTM-KSG58TR5')`,
           }}
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/>/g, "\\u003c"),
+          }}
+        ></script>
         <link
           rel="preload"
           href="/videos/LandPage1.mp4"

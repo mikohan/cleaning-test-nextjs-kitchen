@@ -10,6 +10,8 @@ import { Footer } from "@/app/components/Footer";
 import { LogoTicker } from "@/app/components/LogoTicker";
 import { Testimonials } from "@/app/components/Testimonials";
 import { useLenis } from "lenis/react";
+import { jsonLd } from "@/app/data2";
+import Head from "next/head";
 
 export default function AboutPage() {
   const lenis = useLenis(); //new Lenis();
@@ -19,8 +21,17 @@ export default function AboutPage() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
   };
+  console.log(jsonLd);
   return (
     <main className="relative font-blauerRegular text-couchDarkBlue">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/>/g, "\\u003c"),
+          }}
+        ></script>
+      </Head>
       <Header />
       <Hero />
       <LogoTicker />
