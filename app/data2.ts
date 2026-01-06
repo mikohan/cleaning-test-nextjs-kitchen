@@ -1,55 +1,48 @@
-// export const url = process.env.NEXT_PUBLIC_COMPANY_WEBSITE;
-export const url = process.env.NEXT_PUBLIC_COMPANY_WEBSITE_LOCAL;
+export const url = process.env.NEXT_PUBLIC_COMPANY_WEBSITE;
+// export const url = process.env.NEXT_PUBLIC_COMPANY_WEBSITE_LOCAL;
 export const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Cleaning Service",
+  "@type": "CleaningService", // Fixed: Removed space
+  name: "Angara Streamers",
   image: [`${url}/images/couch/hero.jpg`, `${url}/images/couch/me-vasya.png`],
-  name: "Angara Steamers",
+  url: url,
+  telephone: "+12135987763",
+  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     streetAddress: "13163 fountain Park Dr.",
-    addressLocality: "Play Vista",
+    addressLocality: "Playa Vista", // Note: Fixed a likely typo 'Play' to 'Playa'
     addressRegion: "CA",
     postalCode: "90094",
     addressCountry: "US",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 29,
   },
   geo: {
     "@type": "GeoCoordinates",
     latitude: 33.9767616,
     longitude: -118.4111872,
   },
-  url: url,
-  telephone: "+12135987763",
-  servesCuisine: "",
-  priceRange: "$$$",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    ratingCount: "29",
+    itemReviewed: {
+      "@type": "CleaningService",
+      name: "Angara Streamers",
+    },
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday"],
-      opens: "7:00",
-      closes: "22:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Wednesday", "Thursday", "Friday"],
-      opens: "7:00",
-      closes: "22:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "7:00",
-      closes: "22:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "7:00",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "07:00",
       closes: "22:00",
     },
   ],
