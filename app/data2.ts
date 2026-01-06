@@ -27,28 +27,6 @@ export const jsonLd = {
         latitude: 33.9767616,
         longitude: -118.4111872,
       },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        ratingCount: "29",
-      },
-      review: [
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "John Doe",
-          },
-          datePublished: "2024-01-15",
-          reviewBody: "Excellent deep cleaning service!",
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
-        },
-      ],
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
