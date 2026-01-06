@@ -113,9 +113,8 @@ export const jsonLd = {
       ],
       sameAs: [
         // Add your social media and review profiles
-        // "https://www.facebook.com/angaracleaning",
-        // "https://www.instagram.com/angaracleaning",
-        // "https://www.yelp.com/biz/angara-streamers",
+        "https://www.facebook.com/angarasteamers",
+        "https://www.instagram.com/angara_steamers/",
       ],
     },
     {
