@@ -38,7 +38,8 @@ export const metadata: Metadata = {
     images: [ogUrl],
   },
   other: {
-    "og:logo": "https://upholstery.angaracleaning.com/images/couch/logo.png",
+    "og:logo":
+      process.env.NEXT_PUBLIC_COMPANY_WEBSITE + "/images/couch/logo.png",
   },
 };
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "GTM-KSG58TR5";
