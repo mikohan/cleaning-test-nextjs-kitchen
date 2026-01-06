@@ -5,6 +5,10 @@ import ReactLenis from "lenis/react";
 import "lenis/dist/lenis.css";
 import { Partytown } from "@qwik.dev/partytown/react";
 
+const ogUrl =
+  process.env.NEXT_PUBLIC_COMPANY_WEBSITE + "/images/couch/og_image.png" ||
+  "https://upholstery.angaracleaning.com/images/couch/og_image.png";
+
 export const metadata: Metadata = {
   title: "Angara Streamers - Professional Deep Cleaning in Los Angeles",
   description:
@@ -13,11 +17,11 @@ export const metadata: Metadata = {
     title: "Angara Streamers - Professional Deep Cleaning Services",
     description:
       "Professional deep cleaning in Los Angeles. We move furniture, detail baseboards, and clean areas others miss. Real deep cleaning.",
-    url: "https://upholstery.angaracleaning.com",
+    url: ogUrl,
     siteName: "Angara Streamers",
     images: [
       {
-        url: "https://upholstery.angaracleaning.com/images/couch/hero.jpg",
+        url: ogUrl,
         width: 1200,
         height: 630,
         alt: "Angara Streamers Deep Cleaning Service",
@@ -31,13 +35,10 @@ export const metadata: Metadata = {
     title: "Angara Streamers - Professional Deep Cleaning Services",
     description:
       "Expert deep cleaning in Los Angeles. Real deep cleaning takes time - we detail every surface, move furniture, and clean what others miss.",
-    images: ["https://upholstery.angaracleaning.com/images/couch/hero.jpg"],
+    images: [ogUrl],
   },
 };
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "GTM-KSG58TR5";
-const ogUrl =
-  process.env.NEXT_PUBLIC_COMPANY_WEBSITE + "/images/couch/hero.jpg" ||
-  "https://upholstery.angaracleaning.com/images/couch/hero.jpg";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,8 +90,6 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd),
           }}
         ></script>
-
-        <meta property="og:image" content={ogUrl} />
       </head>
       <ReactLenis root>
         <body>
