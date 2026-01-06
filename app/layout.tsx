@@ -37,6 +37,9 @@ export const metadata: Metadata = {
       "Expert deep cleaning in Los Angeles. Real deep cleaning takes time - we detail every surface, move furniture, and clean what others miss.",
     images: [ogUrl],
   },
+  other: {
+    "og:logo": "https://upholstery.angaracleaning.com/images/couch/logo.png",
+  },
 };
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "GTM-KSG58TR5";
 export default function RootLayout({
