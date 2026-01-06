@@ -64,12 +64,7 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd).replace(/>/g, "\\u003c"),
           }}
         ></script>
-        <link
-          rel="preload"
-          href="/videos/LandPage1.mp4"
-          as="video"
-          type="video/mp4"
-        />
+        <link rel="preload" href="/videos/LandPage1.mp4" type="video/mp4" />
       </head>
       <ReactLenis root>
         <body>

@@ -13,17 +13,10 @@ export const jsonLd = {
     postalCode: "90094",
     addressCountry: "US",
   },
-  review: {
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: 4.9,
-      bestRating: 5,
-    },
-    author: {
-      "@type": "Person",
-      name: "Vlad Vostrikov",
-    },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 29,
   },
   geo: {
     "@type": "GeoCoordinates",
