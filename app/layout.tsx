@@ -6,12 +6,38 @@ import "lenis/dist/lenis.css";
 import { Partytown } from "@qwik.dev/partytown/react";
 
 export const metadata: Metadata = {
-  title: "Couch and Upholstery Professional cleaning in LA",
-  description: "The best cleaning services in Los Angeles",
+  title: "Angara Streamers - Professional Deep Cleaning in Los Angeles",
+  description:
+    "Expert deep cleaning services in Los Angeles. We detail every corner, move furniture, and provide thorough cleaning that goes beyond surface level. Real deep cleaning takes time - we do it right.",
+  openGraph: {
+    title: "Angara Streamers - Professional Deep Cleaning Services",
+    description:
+      "Professional deep cleaning in Los Angeles. We move furniture, detail baseboards, and clean areas others miss. Real deep cleaning.",
+    url: "https://upholstery.angaracleaning.com",
+    siteName: "Angara Streamers",
+    images: [
+      {
+        url: "https://upholstery.angaracleaning.com/images/couch/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Angara Streamers Deep Cleaning Service",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Angara Streamers - Professional Deep Cleaning Services",
+    description:
+      "Expert deep cleaning in Los Angeles. Real deep cleaning takes time - we detail every surface, move furniture, and clean what others miss.",
+    images: ["https://upholstery.angaracleaning.com/images/couch/hero.jpg"],
+  },
 };
-console.log(jsonLd);
 const GTM_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || "GTM-KSG58TR5";
-
+const ogUrl =
+  process.env.NEXT_PUBLIC_COMPANY_WEBSITE + "/images/couch/hero.jpg" ||
+  "https://upholstery.angaracleaning.com/images/couch/hero.jpg";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +89,8 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd),
           }}
         ></script>
+
+        <meta property="og:image" content={ogUrl} />
       </head>
       <ReactLenis root>
         <body>
