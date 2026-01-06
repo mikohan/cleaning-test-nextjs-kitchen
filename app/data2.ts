@@ -2,7 +2,7 @@ export const url = process.env.NEXT_PUBLIC_COMPANY_WEBSITE;
 // export const url = process.env.NEXT_PUBLIC_COMPANY_WEBSITE_LOCAL;
 export const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "CleaningService", // Fixed: Removed space
+  "@type": "CleaningService",
   name: "Angara Streamers",
   image: [`${url}/images/couch/hero.jpg`, `${url}/images/couch/me-vasya.png`],
   url: url,
@@ -11,7 +11,7 @@ export const jsonLd = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "13163 fountain Park Dr.",
-    addressLocality: "Playa Vista", // Note: Fixed a likely typo 'Play' to 'Playa'
+    addressLocality: "Playa Vista",
     addressRegion: "CA",
     postalCode: "90094",
     addressCountry: "US",
@@ -25,10 +25,7 @@ export const jsonLd = {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     ratingCount: "29",
-    itemReviewed: {
-      "@type": "CleaningService",
-      name: "Angara Streamers",
-    },
+    // REMOVED itemReviewed from here
   },
   openingHoursSpecification: [
     {
