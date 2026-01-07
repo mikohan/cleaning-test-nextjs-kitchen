@@ -1,4 +1,4 @@
-import { prices } from "@/app/data";
+import { prices } from "@/app/data/prices";
 import { PriceCard } from "./PriceCard";
 
 export const Prices = () => (

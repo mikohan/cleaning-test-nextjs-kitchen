@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { problems } from "@/app/data"; // Array of texts and images
+import { problems } from "@/app/data/data"; // Array of texts and images
 import { ProcessSmall } from "./ProcessSmall";
 import { Tag } from "../SmallComponents/Tag";
 

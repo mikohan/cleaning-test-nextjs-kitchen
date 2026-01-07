@@ -1,5 +1,5 @@
 "use client";
-import { ITestimonial, testimonials } from "@/app/data";
+import { ITestimonial, testimonials } from "@/app/data/data";
 import { Tag } from "./SmallComponents/Tag";
 import Image from "next/image";
 import { GoogleStars } from "./GoogleStars";

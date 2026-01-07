@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { jsonLd } from "./data2";
+import { jsonLd } from "./data/json-ld";
 import "./globals.css";
 import ReactLenis from "lenis/react";
 import "lenis/dist/lenis.css";
