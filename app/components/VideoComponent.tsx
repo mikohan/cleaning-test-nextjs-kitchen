@@ -26,6 +26,7 @@ export function VideoComponent({
       loop={loop}
       muted={muted}
       className="rounded-2xl"
+      playsInline
     >
       <source src={source} type="video/mp4" />
       <track
