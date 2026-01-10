@@ -45,6 +45,7 @@ export function VideoComponentTestimonials({
         muted={muted}
         className="rounded-2xl"
         poster={poster ? poster : undefined}
+        playsInline
       >
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
