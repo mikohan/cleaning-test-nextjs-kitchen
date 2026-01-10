@@ -5,6 +5,8 @@ import WalletdIcon from "@/public/images/couch/wallet.svg";
 import { Tag } from "@/app/components/SmallComponents/Tag";
 import { VideoComponentTestimonials } from "./VideoComponentTestimonials";
 import Test3Poster from "@/public/images/couch/test3.jpg";
+import Test2Poster from "@/public/images/couch/test2.jpg";
+import Test1Poster from "@/public/images/couch/test1.jpg";
 
 export const VideoReviews = () => {
   return (
@@ -26,7 +28,7 @@ export const VideoReviews = () => {
                 source="videos/test1.mp4"
                 loop={false}
                 autoPlay={false}
-                poster={Test3Poster.src}
+                poster={Test1Poster.src}
               />
             </div>
 
@@ -35,6 +37,7 @@ export const VideoReviews = () => {
                 loop={false}
                 source="videos/test2.mp4"
                 autoPlay={false}
+                poster={Test2Poster.src}
               />
             </div>
             <div className="md:max-w-[33%]">
@@ -42,6 +45,7 @@ export const VideoReviews = () => {
                 loop={false}
                 source="videos/test3.mp4"
                 autoPlay={false}
+                poster={Test3Poster.src}
               />
             </div>
           </div>
