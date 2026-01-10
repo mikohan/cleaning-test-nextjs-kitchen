@@ -50,7 +50,7 @@ export function VideoComponentTestimonials({
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute bottom-6 right-6 w-24 h-24">
+      <div className="absolute bottom-6 right-6 w-32 h-32">
         <Image alt="button play" src={PlayIcon} onClick={handlePlay} />
       </div>
     </div>
