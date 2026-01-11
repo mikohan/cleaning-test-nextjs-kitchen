@@ -27,7 +27,7 @@ export const VideoReviews = () => {
               <VideoComponentTestimonials
                 source="videos/test1.mp4"
                 autoPlay={false}
-                muted
+                muted={false}
                 poster={Test1Poster.src}
               />
             </div>
@@ -37,7 +37,7 @@ export const VideoReviews = () => {
                 loop={false}
                 source="videos/test2.mp4"
                 autoPlay={false}
-                muted
+                muted={false}
                 poster={Test2Poster.src}
               />
             </div>
@@ -45,7 +45,7 @@ export const VideoReviews = () => {
               <VideoComponentTestimonials
                 source="videos/test3.mp4"
                 autoPlay={false}
-                muted
+                muted={false}
                 poster={Test3Poster.src}
               />
             </div>

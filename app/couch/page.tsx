@@ -10,6 +10,7 @@ import { Footer } from "@/app/components/Footer";
 import { LogoTicker } from "@/app/components/LogoTicker";
 import { Testimonials } from "@/app/components/Testimonials";
 import { useLenis } from "lenis/react";
+import { VideoReviews } from "../components/VideReviews";
 
 export default function AboutPage() {
   const lenis = useLenis(); //new Lenis();
@@ -26,6 +27,7 @@ export default function AboutPage() {
       <LogoTicker />
       <Problem />
       <WhyUs />
+      <VideoReviews />
       <section id="prices">
         <Prices />
       </section>
